@@ -2,37 +2,37 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="AISDI_Maps" targetName="NightlyUpdate" />
-      <config projectName="AISDI_Maps" targetName="ExperimentalUpdate" />
-      <config projectName="AISDI_Maps" targetName="ContinuousConfigure" />
-      <config projectName="AISDI_Maps" targetName="ExperimentalMemCheck" />
-      <config projectName="AISDI_Maps" targetName="ExperimentalCoverage" />
-      <config projectName="AISDI_Maps" targetName="Continuous" />
-      <config projectName="AISDI_Maps" targetName="ContinuousTest" />
       <config projectName="AISDI_Maps" targetName="NightlyStart" />
-      <config projectName="AISDI_Maps" targetName="aisdiMaps" />
-      <config projectName="AISDI_Maps" targetName="NightlyMemoryCheck" />
-      <config projectName="AISDI_Maps" targetName="ExperimentalBuild" />
-      <config projectName="AISDI_Maps" targetName="NightlyCoverage" />
+      <config projectName="AISDI_Maps" targetName="ContinuousConfigure" />
+      <config projectName="AISDI_Maps" targetName="check" />
+      <config projectName="AISDI_Maps" targetName="NightlyConfigure" />
+      <config projectName="AISDI_Maps" targetName="ExperimentalMemCheck" />
       <config projectName="AISDI_Maps" targetName="ContinuousStart" />
-      <config projectName="AISDI_Maps" targetName="aisdiMapsTests" />
-      <config projectName="AISDI_Maps" targetName="ContinuousMemCheck" />
+      <config projectName="AISDI_Maps" targetName="ExperimentalCoverage" />
+      <config projectName="AISDI_Maps" targetName="ExperimentalUpdate" />
+      <config projectName="AISDI_Maps" targetName="Continuous" />
+      <config projectName="AISDI_Maps" targetName="ExperimentalStart" />
+      <config projectName="AISDI_Maps" targetName="ContinuousCoverage" />
+      <config projectName="AISDI_Maps" targetName="Experimental" />
+      <config projectName="AISDI_Maps" targetName="ContinuousUpdate" />
+      <config projectName="AISDI_Maps" targetName="ContinuousTest" />
+      <config projectName="AISDI_Maps" targetName="ExperimentalSubmit" />
+      <config projectName="AISDI_Maps" targetName="NightlyBuild" />
+      <config projectName="AISDI_Maps" targetName="Nightly" />
+      <config projectName="AISDI_Maps" targetName="NightlyCoverage" />
       <config projectName="AISDI_Maps" targetName="NightlyTest" />
-      <config projectName="AISDI_Maps" targetName="ExperimentalTest" />
-      <config projectName="AISDI_Maps" targetName="ContinuousSubmit" />
+      <config projectName="AISDI_Maps" targetName="NightlyUpdate" />
       <config projectName="AISDI_Maps" targetName="ExperimentalConfigure" />
       <config projectName="AISDI_Maps" targetName="NightlySubmit" />
-      <config projectName="AISDI_Maps" targetName="ExperimentalStart" />
-      <config projectName="AISDI_Maps" targetName="ExperimentalSubmit" />
-      <config projectName="AISDI_Maps" targetName="ContinuousUpdate" />
-      <config projectName="AISDI_Maps" targetName="check" />
-      <config projectName="AISDI_Maps" targetName="NightlyBuild" />
-      <config projectName="AISDI_Maps" targetName="NightlyMemCheck" />
-      <config projectName="AISDI_Maps" targetName="Experimental" />
-      <config projectName="AISDI_Maps" targetName="NightlyConfigure" />
       <config projectName="AISDI_Maps" targetName="ContinuousBuild" />
-      <config projectName="AISDI_Maps" targetName="ContinuousCoverage" />
-      <config projectName="AISDI_Maps" targetName="Nightly" />
+      <config projectName="AISDI_Maps" targetName="NightlyMemoryCheck" />
+      <config projectName="AISDI_Maps" targetName="ContinuousSubmit" />
+      <config projectName="AISDI_Maps" targetName="aisdiMaps" />
+      <config projectName="AISDI_Maps" targetName="NightlyMemCheck" />
+      <config projectName="AISDI_Maps" targetName="ExperimentalBuild" />
+      <config projectName="AISDI_Maps" targetName="ExperimentalTest" />
+      <config projectName="AISDI_Maps" targetName="ContinuousMemCheck" />
+      <config projectName="AISDI_Maps" targetName="aisdiMapsTests" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -41,7 +41,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8217b05f-073d-4939-ad19-d493a11f9674" name="Default" comment="" />
+    <list default="true" id="8217b05f-073d-4939-ad19-d493a11f9674" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/DartConfiguration.tcl" afterPath="$PROJECT_DIR$/cmake-build-debug/DartConfiguration.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/HashMapTests.cpp" afterPath="$PROJECT_DIR$/tests/HashMapTests.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/TreeMapTests.cpp" afterPath="$PROJECT_DIR$/tests/TreeMapTests.cpp" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,30 +60,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HashMap.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HashMap.h">
+      <file leaf-file-name="TreeMapTests.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/TreeMapTests.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="2115">
+              <caret line="149" column="3" lean-forward="false" selection-start-line="149" selection-start-column="3" selection-end-line="149" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <file leaf-file-name="HashMapTests.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/HashMapTests.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TreeMap.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/TreeMap.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-11350">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -88,6 +85,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/TreeMap.h" />
+        <option value="$PROJECT_DIR$/src/HashMap.h" />
+        <option value="$PROJECT_DIR$/tests/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/tests/TreeMapTests.cpp" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -95,9 +102,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="826" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -137,6 +143,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AISDI_Maps" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mapy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -148,6 +168,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -161,7 +182,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ContinuousBuild">
+  <component name="RunManager" selected="Application.Build All">
     <configuration default="true" type="CLion_Remote" factoryName="GDB Remote Debug" remoteCommand="" symbolFile="" sysroot="">
       <method />
     </configuration>
@@ -258,9 +279,17 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
+      <node-interpreter value="project" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -334,10 +363,6 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;.&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
-      <envs />
       <method />
     </configuration>
     <configuration default="false" name="Continuous" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AISDI_Maps" TARGET_NAME="Continuous" CONFIG_NAME="Debug">
@@ -464,39 +489,43 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AISDI_Maps" RUN_TARGET_NAME="aisdiMaps" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+      <method />
+    </configuration>
     <list size="32">
-      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Continuous" />
-      <item index="2" class="java.lang.String" itemvalue="Application.ContinuousBuild" />
-      <item index="3" class="java.lang.String" itemvalue="Application.ContinuousConfigure" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ContinuousCoverage" />
-      <item index="5" class="java.lang.String" itemvalue="Application.ContinuousMemCheck" />
-      <item index="6" class="java.lang.String" itemvalue="Application.ContinuousStart" />
-      <item index="7" class="java.lang.String" itemvalue="Application.ContinuousSubmit" />
-      <item index="8" class="java.lang.String" itemvalue="Application.ContinuousTest" />
-      <item index="9" class="java.lang.String" itemvalue="Application.ContinuousUpdate" />
-      <item index="10" class="java.lang.String" itemvalue="Application.Experimental" />
-      <item index="11" class="java.lang.String" itemvalue="Application.ExperimentalBuild" />
-      <item index="12" class="java.lang.String" itemvalue="Application.ExperimentalConfigure" />
-      <item index="13" class="java.lang.String" itemvalue="Application.ExperimentalCoverage" />
-      <item index="14" class="java.lang.String" itemvalue="Application.ExperimentalMemCheck" />
-      <item index="15" class="java.lang.String" itemvalue="Application.ExperimentalStart" />
-      <item index="16" class="java.lang.String" itemvalue="Application.ExperimentalSubmit" />
-      <item index="17" class="java.lang.String" itemvalue="Application.ExperimentalTest" />
-      <item index="18" class="java.lang.String" itemvalue="Application.ExperimentalUpdate" />
-      <item index="19" class="java.lang.String" itemvalue="Application.Nightly" />
-      <item index="20" class="java.lang.String" itemvalue="Application.NightlyBuild" />
-      <item index="21" class="java.lang.String" itemvalue="Application.NightlyConfigure" />
-      <item index="22" class="java.lang.String" itemvalue="Application.NightlyCoverage" />
-      <item index="23" class="java.lang.String" itemvalue="Application.NightlyMemCheck" />
-      <item index="24" class="java.lang.String" itemvalue="Application.NightlyMemoryCheck" />
-      <item index="25" class="java.lang.String" itemvalue="Application.NightlyStart" />
-      <item index="26" class="java.lang.String" itemvalue="Application.NightlySubmit" />
-      <item index="27" class="java.lang.String" itemvalue="Application.NightlyTest" />
-      <item index="28" class="java.lang.String" itemvalue="Application.NightlyUpdate" />
-      <item index="29" class="java.lang.String" itemvalue="Application.aisdiMaps" />
-      <item index="30" class="java.lang.String" itemvalue="Application.aisdiMapsTests" />
-      <item index="31" class="java.lang.String" itemvalue="Application.check" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Continuous" />
+      <item index="1" class="java.lang.String" itemvalue="Application.ContinuousBuild" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ContinuousConfigure" />
+      <item index="3" class="java.lang.String" itemvalue="Application.ContinuousCoverage" />
+      <item index="4" class="java.lang.String" itemvalue="Application.ContinuousMemCheck" />
+      <item index="5" class="java.lang.String" itemvalue="Application.ContinuousStart" />
+      <item index="6" class="java.lang.String" itemvalue="Application.ContinuousSubmit" />
+      <item index="7" class="java.lang.String" itemvalue="Application.ContinuousTest" />
+      <item index="8" class="java.lang.String" itemvalue="Application.ContinuousUpdate" />
+      <item index="9" class="java.lang.String" itemvalue="Application.Experimental" />
+      <item index="10" class="java.lang.String" itemvalue="Application.ExperimentalBuild" />
+      <item index="11" class="java.lang.String" itemvalue="Application.ExperimentalConfigure" />
+      <item index="12" class="java.lang.String" itemvalue="Application.ExperimentalCoverage" />
+      <item index="13" class="java.lang.String" itemvalue="Application.ExperimentalMemCheck" />
+      <item index="14" class="java.lang.String" itemvalue="Application.ExperimentalStart" />
+      <item index="15" class="java.lang.String" itemvalue="Application.ExperimentalSubmit" />
+      <item index="16" class="java.lang.String" itemvalue="Application.ExperimentalTest" />
+      <item index="17" class="java.lang.String" itemvalue="Application.ExperimentalUpdate" />
+      <item index="18" class="java.lang.String" itemvalue="Application.Nightly" />
+      <item index="19" class="java.lang.String" itemvalue="Application.NightlyBuild" />
+      <item index="20" class="java.lang.String" itemvalue="Application.NightlyConfigure" />
+      <item index="21" class="java.lang.String" itemvalue="Application.NightlyCoverage" />
+      <item index="22" class="java.lang.String" itemvalue="Application.NightlyMemCheck" />
+      <item index="23" class="java.lang.String" itemvalue="Application.NightlyMemoryCheck" />
+      <item index="24" class="java.lang.String" itemvalue="Application.NightlyStart" />
+      <item index="25" class="java.lang.String" itemvalue="Application.NightlySubmit" />
+      <item index="26" class="java.lang.String" itemvalue="Application.NightlyTest" />
+      <item index="27" class="java.lang.String" itemvalue="Application.NightlyUpdate" />
+      <item index="28" class="java.lang.String" itemvalue="Application.aisdiMaps" />
+      <item index="29" class="java.lang.String" itemvalue="Application.aisdiMapsTests" />
+      <item index="30" class="java.lang.String" itemvalue="Application.check" />
+      <item index="31" class="java.lang.String" itemvalue="Application.Build All" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -509,33 +538,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512080138589</updated>
-      <workItem from="1512080140374" duration="247000" />
+      <workItem from="1512080140374" duration="329000" />
+      <workItem from="1512426586673" duration="986000" />
+      <workItem from="1512427687994" duration="82000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247000" />
+    <option name="totallyTimeSpent" value="1397000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="826" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25679544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.289801" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -554,7 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -569,6 +601,65 @@
     <entry file="file://$PROJECT_DIR$/src/TreeMap.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="61" lean-forward="false" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashMap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/boost/test/unit_test_suite.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="123" column="48" lean-forward="false" selection-start-line="123" selection-start-column="48" selection-end-line="123" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TreeMap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3534">
+          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TreeMapTests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2115">
+          <caret line="149" column="3" lean-forward="false" selection-start-line="149" selection-start-column="3" selection-end-line="149" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/HashMapTests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11350">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
