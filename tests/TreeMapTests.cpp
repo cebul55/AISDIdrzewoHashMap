@@ -109,10 +109,10 @@ std::size_t OperationCountingObject::copiedObjects = 0;
 std::size_t OperationCountingObject::movedObjects = 0;
 std::size_t OperationCountingObject::assignedObjects = 0 ;
 
-std::ostream& operator<<(std::ostream& out, const OperationCountingObject& obj)
+/*std::ostream& operator<<(std::ostream& out, const OperationCountingObject& obj)
 {
   return out << '<' << static_cast<int>(obj) << '>';
-}
+}*/
 
 struct Fixture
 {
@@ -191,37 +191,37 @@ void thenNoItemsWereCopiedOrMoved()
   // unable to check it (in a simple way) for all objects, hence template specialization.
 }
 
-template <>
+/*template <>
 void thenConstructedObjectsCountWas<OperationCountingObject>(std::size_t count)
 {
   BOOST_CHECK_EQUAL(OperationCountingObject::constructedObjectsCount(), count);
-}
+}*/
 
-template <>
+/*template <>
 void thenDestroyedObjectsCountWas<OperationCountingObject>(std::size_t count)
 {
   BOOST_CHECK_EQUAL(OperationCountingObject::destroyedObjectsCount(), count);
-}
+}*/
 
-template <>
+/*template <>
 void thenCopiedObjectsCountWas<OperationCountingObject>(std::size_t count)
 {
   BOOST_CHECK_EQUAL(OperationCountingObject::copiedObjectsCount(), count);
-}
+}*/
 
-template <>
+/*template <>
 void thenMovedObjectsCountWas<OperationCountingObject>(std::size_t count)
 {
   BOOST_CHECK_EQUAL(OperationCountingObject::movedObjectsCount(), count);
-}
+}*/
 
-template <>
+/*template <>
 void thenAssignedObjectsCountWas<OperationCountingObject>(std::size_t count)
 {
   BOOST_CHECK_EQUAL(OperationCountingObject::assignedObjectsCount(), count);
-}
+}*/
 
-BOOST_AUTO_TEST_CASE_TEMPLATE(GivenMap_WhenCreatedWithDefaultConstructor_ThenItIsEmpty,
+/*BOOST_AUTO_TEST_CASE_TEMPLATE(GivenMap_WhenCreatedWithDefaultConstructor_ThenItIsEmpty,
                               K,
                               TestedKeyTypes)
 {
@@ -784,7 +784,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenTwoMapsWithDifferentKeys_WhenComparingThem_Th
   const Map<K> other = { { 27, "Alice" }, { 42, "Bob" } };
 
   BOOST_CHECK(map != other);
-}
+}*/
 
 // ConstIterator is tested via Iterator methods.
 // If Iterator methods are to be changed, then new ConstIterator tests are required.

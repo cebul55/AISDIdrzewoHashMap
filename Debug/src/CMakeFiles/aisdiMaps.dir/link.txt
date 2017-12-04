@@ -1,0 +1,1 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   --std=c++11 -Wall -pedantic -Wextra -Werror -g -O0 -g3 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/aisdiMaps.dir/main.cpp.o  -o aisdiMaps 

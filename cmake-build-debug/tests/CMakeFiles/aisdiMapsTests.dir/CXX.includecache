@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/HashMap.h
+cstddef
+-
+initializer_list
+-
+stdexcept
+-
+utility
+-
+iostream
+-
+
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/HashMapTests.cpp
+HashMap.h
+-
+cstdint
+-
+string
+-
+map
+-
+boost/test/unit_test.hpp
+-
+boost/mpl/list.hpp
+-
+
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/test_main.cpp
+boost/test/unit_test.hpp
+-
+

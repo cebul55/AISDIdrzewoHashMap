@@ -178,33 +178,6 @@ HashMapTests.cpp.s:
 	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug" && $(MAKE) -f tests/CMakeFiles/aisdiMapsTests.dir/build.make tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.s
 .PHONY : HashMapTests.cpp.s
 
-TreeMapTests.o: TreeMapTests.cpp.o
-
-.PHONY : TreeMapTests.o
-
-# target to build an object file
-TreeMapTests.cpp.o:
-	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug" && $(MAKE) -f tests/CMakeFiles/aisdiMapsTests.dir/build.make tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o
-.PHONY : TreeMapTests.cpp.o
-
-TreeMapTests.i: TreeMapTests.cpp.i
-
-.PHONY : TreeMapTests.i
-
-# target to preprocess a source file
-TreeMapTests.cpp.i:
-	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug" && $(MAKE) -f tests/CMakeFiles/aisdiMapsTests.dir/build.make tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.i
-.PHONY : TreeMapTests.cpp.i
-
-TreeMapTests.s: TreeMapTests.cpp.s
-
-.PHONY : TreeMapTests.s
-
-# target to generate assembly for a file
-TreeMapTests.cpp.s:
-	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug" && $(MAKE) -f tests/CMakeFiles/aisdiMapsTests.dir/build.make tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.s
-.PHONY : TreeMapTests.cpp.s
-
 test_main.o: test_main.cpp.o
 
 .PHONY : test_main.o
@@ -246,9 +219,6 @@ help:
 	@echo "... HashMapTests.o"
 	@echo "... HashMapTests.i"
 	@echo "... HashMapTests.s"
-	@echo "... TreeMapTests.o"
-	@echo "... TreeMapTests.i"
-	@echo "... TreeMapTests.s"
 	@echo "... test_main.o"
 	@echo "... test_main.i"
 	@echo "... test_main.s"

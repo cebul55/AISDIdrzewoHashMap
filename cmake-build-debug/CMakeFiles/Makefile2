@@ -990,7 +990,7 @@ all: src/CMakeFiles/aisdiMaps.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/aisdiMaps.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug/CMakeFiles" 6
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug/CMakeFiles" 5
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/aisdiMaps.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug/CMakeFiles" 0
 .PHONY : src/CMakeFiles/aisdiMaps.dir/rule
@@ -1041,7 +1041,7 @@ tests/CMakeFiles/check.dir/all: tests/CMakeFiles/aisdiMapsTests.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/check.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug/CMakeFiles" 4
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug/CMakeFiles" 3
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/check.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug/CMakeFiles" 0
 .PHONY : tests/CMakeFiles/check.dir/rule
@@ -1068,7 +1068,7 @@ clean: tests/CMakeFiles/check.dir/clean
 tests/CMakeFiles/aisdiMapsTests.dir/all:
 	$(MAKE) -f tests/CMakeFiles/aisdiMapsTests.dir/build.make tests/CMakeFiles/aisdiMapsTests.dir/depend
 	$(MAKE) -f tests/CMakeFiles/aisdiMapsTests.dir/build.make tests/CMakeFiles/aisdiMapsTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug/CMakeFiles" --progress-num=3,4,5,6 "Built target aisdiMapsTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug/CMakeFiles" --progress-num=3,4,5 "Built target aisdiMapsTests"
 .PHONY : tests/CMakeFiles/aisdiMapsTests.dir/all
 
 # Include target in all.
@@ -1078,7 +1078,7 @@ all: tests/CMakeFiles/aisdiMapsTests.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/aisdiMapsTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug/CMakeFiles" 4
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug/CMakeFiles" 3
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/aisdiMapsTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug/CMakeFiles" 0
 .PHONY : tests/CMakeFiles/aisdiMapsTests.dir/rule

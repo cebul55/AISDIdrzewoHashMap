@@ -5,6 +5,7 @@
 #include <initializer_list>
 #include <stdexcept>
 #include <utility>
+#include <iostream>
 
 namespace aisdi
 {
@@ -24,6 +25,9 @@ public:
   class Iterator;
   using iterator = Iterator;
   using const_iterator = ConstIterator;
+
+private:
+
 
   TreeMap()
   {}

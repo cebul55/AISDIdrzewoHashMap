@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="AISDI_Maps"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\tests\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Nightly">
+				<Option working_dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 Nightly"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Continuous">
+				<Option working_dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 Continuous"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Experimental">
+				<Option working_dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 Experimental"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="aisdiMaps">
+				<Option output="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/src/aisdiMaps" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/src/Makefile&quot;  VERBOSE=1 aisdiMaps"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="aisdiMaps/fast">
+				<Option output="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/src/aisdiMaps" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/src/Makefile&quot;  VERBOSE=1 aisdiMaps/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="check">
+				<Option working_dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/tests"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/tests/Makefile&quot;  VERBOSE=1 check"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="aisdiMapsTests">
+				<Option output="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/tests/aisdiMapsTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/tests/Makefile&quot;  VERBOSE=1 aisdiMapsTests"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="aisdiMapsTests/fast">
+				<Option output="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/tests/aisdiMapsTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/tests/Makefile&quot;  VERBOSE=1 aisdiMapsTests/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bartoszcybulski/Documents/Informatyka\ WEITI\ Materiały\ /Semestr_3/Algorytmy\ i\ Struktury\ Danych/Lab/Mapy/Debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/src/HashMap.h">
+			<Option target="aisdiMaps"/>
+		</Unit>
+		<Unit filename="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/src/TreeMap.h">
+			<Option target="aisdiMaps"/>
+		</Unit>
+		<Unit filename="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/src/main.cpp">
+			<Option target="aisdiMaps"/>
+		</Unit>
+		<Unit filename="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/HashMapTests.cpp">
+			<Option target="aisdiMapsTests"/>
+		</Unit>
+		<Unit filename="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/test_main.cpp">
+			<Option target="aisdiMapsTests"/>
+		</Unit>
+		<Unit filename="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

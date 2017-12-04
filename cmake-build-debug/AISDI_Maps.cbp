@@ -192,9 +192,6 @@
 		<Unit filename="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/HashMapTests.cpp">
 			<Option target="aisdiMapsTests"/>
 		</Unit>
-		<Unit filename="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/TreeMapTests.cpp">
-			<Option target="aisdiMapsTests"/>
-		</Unit>
 		<Unit filename="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/test_main.cpp">
 			<Option target="aisdiMapsTests"/>
 		</Unit>
