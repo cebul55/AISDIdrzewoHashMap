@@ -81,40 +81,40 @@ tests/CMakeFiles/aisdiMapsTests.dir/test_main.cpp.o.provides: tests/CMakeFiles/a
 tests/CMakeFiles/aisdiMapsTests.dir/test_main.cpp.o.provides.build: tests/CMakeFiles/aisdiMapsTests.dir/test_main.cpp.o
 
 
-tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o: tests/CMakeFiles/aisdiMapsTests.dir/flags.make
-tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o: ../tests/HashMapTests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o"
-	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/tests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o -c "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/HashMapTests.cpp"
+tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o: tests/CMakeFiles/aisdiMapsTests.dir/flags.make
+tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o: ../tests/TreeMapTests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o"
+	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/tests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o -c "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/TreeMapTests.cpp"
 
-tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.i"
-	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/tests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/HashMapTests.cpp" > CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.i
+tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.i"
+	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/tests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/TreeMapTests.cpp" > CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.i
 
-tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.s"
-	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/tests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/HashMapTests.cpp" -o CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.s
+tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.s"
+	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug/tests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/TreeMapTests.cpp" -o CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.s
 
-tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o.requires:
+tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o.requires:
 
-.PHONY : tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o.requires
+.PHONY : tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o.requires
 
-tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o.provides: tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o.requires
-	$(MAKE) -f tests/CMakeFiles/aisdiMapsTests.dir/build.make tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o.provides.build
-.PHONY : tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o.provides
+tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o.provides: tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o.requires
+	$(MAKE) -f tests/CMakeFiles/aisdiMapsTests.dir/build.make tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o.provides.build
+.PHONY : tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o.provides
 
-tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o.provides.build: tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o
+tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o.provides.build: tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o
 
 
 # Object files for target aisdiMapsTests
 aisdiMapsTests_OBJECTS = \
 "CMakeFiles/aisdiMapsTests.dir/test_main.cpp.o" \
-"CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o"
+"CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o"
 
 # External object files for target aisdiMapsTests
 aisdiMapsTests_EXTERNAL_OBJECTS =
 
 tests/aisdiMapsTests: tests/CMakeFiles/aisdiMapsTests.dir/test_main.cpp.o
-tests/aisdiMapsTests: tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o
+tests/aisdiMapsTests: tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o
 tests/aisdiMapsTests: tests/CMakeFiles/aisdiMapsTests.dir/build.make
 tests/aisdiMapsTests: /usr/local/lib/libboost_unit_test_framework-mt.dylib
 tests/aisdiMapsTests: tests/CMakeFiles/aisdiMapsTests.dir/link.txt
@@ -127,7 +127,7 @@ tests/CMakeFiles/aisdiMapsTests.dir/build: tests/aisdiMapsTests
 .PHONY : tests/CMakeFiles/aisdiMapsTests.dir/build
 
 tests/CMakeFiles/aisdiMapsTests.dir/requires: tests/CMakeFiles/aisdiMapsTests.dir/test_main.cpp.o.requires
-tests/CMakeFiles/aisdiMapsTests.dir/requires: tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o.requires
+tests/CMakeFiles/aisdiMapsTests.dir/requires: tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o.requires
 
 .PHONY : tests/CMakeFiles/aisdiMapsTests.dir/requires
 

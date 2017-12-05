@@ -151,32 +151,32 @@ aisdiMapsTests/fast:
 	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug" && $(MAKE) -f tests/CMakeFiles/aisdiMapsTests.dir/build.make tests/CMakeFiles/aisdiMapsTests.dir/build
 .PHONY : aisdiMapsTests/fast
 
-HashMapTests.o: HashMapTests.cpp.o
+TreeMapTests.o: TreeMapTests.cpp.o
 
-.PHONY : HashMapTests.o
+.PHONY : TreeMapTests.o
 
 # target to build an object file
-HashMapTests.cpp.o:
-	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug" && $(MAKE) -f tests/CMakeFiles/aisdiMapsTests.dir/build.make tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o
-.PHONY : HashMapTests.cpp.o
+TreeMapTests.cpp.o:
+	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug" && $(MAKE) -f tests/CMakeFiles/aisdiMapsTests.dir/build.make tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o
+.PHONY : TreeMapTests.cpp.o
 
-HashMapTests.i: HashMapTests.cpp.i
+TreeMapTests.i: TreeMapTests.cpp.i
 
-.PHONY : HashMapTests.i
+.PHONY : TreeMapTests.i
 
 # target to preprocess a source file
-HashMapTests.cpp.i:
-	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug" && $(MAKE) -f tests/CMakeFiles/aisdiMapsTests.dir/build.make tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.i
-.PHONY : HashMapTests.cpp.i
+TreeMapTests.cpp.i:
+	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug" && $(MAKE) -f tests/CMakeFiles/aisdiMapsTests.dir/build.make tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.i
+.PHONY : TreeMapTests.cpp.i
 
-HashMapTests.s: HashMapTests.cpp.s
+TreeMapTests.s: TreeMapTests.cpp.s
 
-.PHONY : HashMapTests.s
+.PHONY : TreeMapTests.s
 
 # target to generate assembly for a file
-HashMapTests.cpp.s:
-	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug" && $(MAKE) -f tests/CMakeFiles/aisdiMapsTests.dir/build.make tests/CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.s
-.PHONY : HashMapTests.cpp.s
+TreeMapTests.cpp.s:
+	cd "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/Debug" && $(MAKE) -f tests/CMakeFiles/aisdiMapsTests.dir/build.make tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.s
+.PHONY : TreeMapTests.cpp.s
 
 test_main.o: test_main.cpp.o
 
@@ -216,9 +216,9 @@ help:
 	@echo "... test"
 	@echo "... check"
 	@echo "... aisdiMapsTests"
-	@echo "... HashMapTests.o"
-	@echo "... HashMapTests.i"
-	@echo "... HashMapTests.s"
+	@echo "... TreeMapTests.o"
+	@echo "... TreeMapTests.i"
+	@echo "... TreeMapTests.s"
 	@echo "... test_main.o"
 	@echo "... test_main.i"
 	@echo "... test_main.s"

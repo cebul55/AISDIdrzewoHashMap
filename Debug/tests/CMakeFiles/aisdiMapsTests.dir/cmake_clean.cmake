@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/aisdiMapsTests.dir/test_main.cpp.o"
-  "CMakeFiles/aisdiMapsTests.dir/HashMapTests.cpp.o"
+  "CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o"
   "aisdiMapsTests.pdb"
   "aisdiMapsTests"
 )

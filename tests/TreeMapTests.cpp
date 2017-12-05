@@ -221,7 +221,7 @@ void thenAssignedObjectsCountWas<OperationCountingObject>(std::size_t count)
   BOOST_CHECK_EQUAL(OperationCountingObject::assignedObjectsCount(), count);
 }*/
 
-/*BOOST_AUTO_TEST_CASE_TEMPLATE(GivenMap_WhenCreatedWithDefaultConstructor_ThenItIsEmpty,
+BOOST_AUTO_TEST_CASE_TEMPLATE(GivenMap_WhenCreatedWithDefaultConstructor_ThenItIsEmpty,
                               K,
                               TestedKeyTypes)
 {
@@ -229,7 +229,7 @@ void thenAssignedObjectsCountWas<OperationCountingObject>(std::size_t count)
 
   BOOST_CHECK(map.isEmpty());
 }
-
+/*
 BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenAddingItem_ThenItIsNoLongerEmpty,
                               K,
                               TestedKeyTypes)

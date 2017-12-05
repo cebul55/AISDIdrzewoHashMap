@@ -1,19 +1,24 @@
-Start testing: Dec 05 00:25 CET
+Start testing: Dec 05 01:44 CET
 ----------------------------------------------------------
 1/1 Testing: boostUnitTestsRun
 1/1 Test: boostUnitTestsRun
 Command: "/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug/tests/aisdiMapsTests"
 Directory: /Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/cmake-build-debug/tests
-"boostUnitTestsRun" start time: Dec 05 00:25 CET
+"boostUnitTestsRun" start time: Dec 05 01:44 CET
 Output:
 ----------------------------------------------------------
-Test setup error: test tree is empty
+Running 3 test cases...
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/TreeMapTests.cpp:230: error: in "TreeMapTests/GivenMap_WhenCreatedWithDefaultConstructor_ThenItIsEmpty<int>": check map.isEmpty() has failed
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/TreeMapTests.cpp:230: error: in "TreeMapTests/GivenMap_WhenCreatedWithDefaultConstructor_ThenItIsEmpty<unsigned_long_long>": check map.isEmpty() has failed
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/tests/TreeMapTests.cpp:230: error: in "TreeMapTests/GivenMap_WhenCreatedWithDefaultConstructor_ThenItIsEmpty<(anonymous_namespace)__OperationCountingObject>": check map.isEmpty() has failed
+
+*** 3 failures are detected in the test module "aisdi_maps_tests"
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Failed.
-"boostUnitTestsRun" end time: Dec 05 00:25 CET
+"boostUnitTestsRun" end time: Dec 05 01:44 CET
 "boostUnitTestsRun" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Dec 05 00:25 CET
+End testing: Dec 05 01:44 CET

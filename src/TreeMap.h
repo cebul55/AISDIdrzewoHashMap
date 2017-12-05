@@ -23,14 +23,23 @@ public:
 
   class ConstIterator;
   class Iterator;
+  class Node;
   using iterator = Iterator;
   using const_iterator = ConstIterator;
 
-private:
+  Node *root;         /*empty node , which left child is treeroot*/
+  int nodeCount;
 
 
-  TreeMap()
-  {}
+
+  TreeMap()           /*creating empty tree with one Node ( guard)*/
+  {
+    Node *guard = new Node;
+    guard->parent = nullptr;
+    guard->left = nullptr;
+    guard->right = nullptr;
+    nodeCount = 0;
+  }
 
   TreeMap(std::initializer_list<value_type> list)
   {
@@ -64,7 +73,8 @@ private:
 
   bool isEmpty() const
   {
-    throw std::runtime_error("TODO");
+    if(root->left == nullptr)return true;
+    return false;
   }
 
   mapped_type& operator[](const key_type& key)
@@ -155,6 +165,26 @@ private:
     return cend();
   }
 };
+
+template<typename KeyType, typename ValueType>
+class TreeMap<KeyType , ValueType>::Node
+{
+public:
+    Node *parent;       /*ptr to parent*/
+    Node *left;         /*ptr to left child*/
+    Node *right;        /*ptr to right child*/
+    ValueType value;    /*node value*/
+    int hight;          /*hight of highest subtree + 1*/
+
+    Node(){
+      parent = nullptr;
+      left = nullptr;
+      right = nullptr;
+      hight = 0;
+    }
+
+};
+
 
 template <typename KeyType, typename ValueType>
 class TreeMap<KeyType, ValueType>::ConstIterator
