@@ -73,7 +73,7 @@ public:
 
   bool isEmpty() const
   {
-    if(root->left == nullptr)return true;
+    if(nodeCount == 0)return true;
     return false;
   }
 

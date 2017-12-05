@@ -1,3 +1,2 @@
-boostUnitTestsRun 0 0
+boostUnitTestsRun 5 0.00333462
 ---
-boostUnitTestsRun

@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/src/HashMap.h
+cstddef
+-
+initializer_list
+-
+stdexcept
+-
+utility
+-
+iostream
+-
+
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/src/TreeMap.h
+cstddef
+-
+initializer_list
+-
+stdexcept
+-
+utility
+-
+iostream
+-
+
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/src/main.cpp
+cstddef
+-
+cstdlib
+-
+string
+-
+TreeMap.h
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/src/TreeMap.h
+HashMap.h
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Mapy/src/HashMap.h
+

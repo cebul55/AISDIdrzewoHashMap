@@ -42,32 +42,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8217b05f-073d-4939-ad19-d493a11f9674" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/tests/aisdiMapsTests" afterPath="$PROJECT_DIR$/Debug/tests/aisdiMapsTests" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/CMakeFiles/Progress/3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/CMakeFiles/Progress/4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/CMakeFiles/Progress/5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/CMakeFiles/Progress/count.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o" afterPath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/TreeMapTests.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/tests/aisdiMapsTests" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/aisdiMapsTests" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/AISDI_Maps.cbp" afterPath="$PROJECT_DIR$/Debug/AISDI_Maps.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/CXX.includecache" afterPath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/build.make" afterPath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/depend.internal" afterPath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/depend.make" afterPath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/link.txt" afterPath="$PROJECT_DIR$/Debug/tests/CMakeFiles/aisdiMapsTests.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/tests/Makefile" afterPath="$PROJECT_DIR$/Debug/tests/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/tests/Testing/Temporary/LastTest.log" afterPath="$PROJECT_DIR$/Debug/tests/Testing/Temporary/LastTest.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/AISDI_Maps.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/AISDI_Maps.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/aisdiMapsTests.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/tests/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/aisdiMaps.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/aisdiMaps.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/tests/Testing/Temporary/CTestCostData.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/Testing/Temporary/CTestCostData.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/tests/Testing/Temporary/LastTest.log" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/Testing/Temporary/LastTest.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TreeMap.h" afterPath="$PROJECT_DIR$/src/TreeMap.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/CMakeLists.txt" afterPath="$PROJECT_DIR$/tests/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/TreeMapTests.cpp" afterPath="$PROJECT_DIR$/tests/TreeMapTests.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,8 +73,8 @@
       <file leaf-file-name="TreeMapTests.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/TreeMapTests.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1366">
-              <caret line="119" column="3" lean-forward="false" selection-start-line="119" selection-start-column="3" selection-end-line="119" selection-end-column="3" />
+            <state relative-caret-position="511">
+              <caret line="161" column="1" lean-forward="true" selection-start-line="161" selection-start-column="1" selection-end-line="161" selection-end-column="1" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
                 <element signature="e#2353#2365#0" expanded="true" />
@@ -93,11 +83,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#122#146#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="TreeMap.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TreeMap.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2353">
-              <caret line="174" column="19" lean-forward="false" selection-start-line="174" selection-start-column="19" selection-end-line="174" selection-end-column="19" />
+            <state relative-caret-position="141">
+              <caret line="75" column="28" lean-forward="false" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
               <folding>
                 <element signature="e#3023#3061#0" expanded="true" />
                 <element signature="e#3464#3502#0" expanded="true" />
@@ -117,8 +120,9 @@
         <option value="$PROJECT_DIR$/src/HashMap.h" />
         <option value="$PROJECT_DIR$/tests/HashMapTests.cpp" />
         <option value="$PROJECT_DIR$/tests/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/TreeMap.h" />
         <option value="$PROJECT_DIR$/tests/TreeMapTests.cpp" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/TreeMap.h" />
       </list>
     </option>
   </component>
@@ -567,25 +571,26 @@
       <updated>1512080138589</updated>
       <workItem from="1512080140374" duration="329000" />
       <workItem from="1512426586673" duration="986000" />
-      <workItem from="1512427687994" duration="3763000" />
+      <workItem from="1512427687994" duration="4456000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5078000" />
+    <option name="totallyTimeSpent" value="5771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25679544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25679544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.289801" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.289801" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -621,6 +626,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -669,14 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="123" column="48" lean-forward="false" selection-start-line="123" selection-start-column="48" selection-end-line="123" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -768,8 +791,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/TreeMapTests.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1366">
-          <caret line="119" column="3" lean-forward="false" selection-start-line="119" selection-start-column="3" selection-end-line="119" selection-end-column="3" />
+        <state relative-caret-position="511">
+          <caret line="161" column="1" lean-forward="true" selection-start-line="161" selection-start-column="1" selection-end-line="161" selection-end-column="1" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#2353#2365#0" expanded="true" />
@@ -777,10 +800,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#122#146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TreeMap.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2353">
-          <caret line="174" column="19" lean-forward="false" selection-start-line="174" selection-start-column="19" selection-end-line="174" selection-end-column="19" />
+        <state relative-caret-position="141">
+          <caret line="75" column="28" lean-forward="false" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
           <folding>
             <element signature="e#3023#3061#0" expanded="true" />
             <element signature="e#3464#3502#0" expanded="true" />
