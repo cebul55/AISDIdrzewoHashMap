@@ -34,10 +34,8 @@ public:
 
   TreeMap()           /*creating empty tree with one Node ( guard)*/
   {
-    Node *guard = new Node;
-    guard->parent = nullptr;
-    guard->left = nullptr;
-    guard->right = nullptr;
+    auto *guard = new Node;
+    root = guard;
     nodeCount = 0;
   }
 
@@ -73,14 +71,21 @@ public:
 
   bool isEmpty() const
   {
-    if(nodeCount == 0)return true;
+    if(root->left == nullptr)return true;
     return false;
   }
 
   mapped_type& operator[](const key_type& key)
   {
+    //TODO adding item to map
     (void)key;
-    throw std::runtime_error("TODO");
+    throw std::runtime_error("TODaO");
+/*    if(isEmpty()){
+      auto node = new Node ;
+      node->key = key;
+      node->value = *key ;
+      nodeCount++;
+    }*/
   }
 
   const mapped_type& valueOf(const key_type& key) const
@@ -121,7 +126,7 @@ public:
 
   size_type getSize() const
   {
-    throw std::runtime_error("TODO");
+    return nodeCount;
   }
 
   bool operator==(const TreeMap& other) const
@@ -173,6 +178,7 @@ public:
     Node *parent;       /*ptr to parent*/
     Node *left;         /*ptr to left child*/
     Node *right;        /*ptr to right child*/
+    KeyType key;        /*key value*/
     ValueType value;    /*node value*/
     int hight;          /*hight of highest subtree + 1*/
 

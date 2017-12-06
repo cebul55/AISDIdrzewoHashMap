@@ -229,7 +229,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenMap_WhenCreatedWithDefaultConstructor_ThenItI
 
   BOOST_CHECK(map.isEmpty());
 }
-/*
+
 BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenAddingItem_ThenItIsNoLongerEmpty,
                               K,
                               TestedKeyTypes)
@@ -240,7 +240,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenAddingItem_ThenItIsNoLongerEmpty
 
   BOOST_CHECK(!map.isEmpty());
 }
-
+/*
 BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenGettingIterators_ThenBeginEqualsEnd,
                               K,
                               TestedKeyTypes)
@@ -433,7 +433,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenSearchingForKey_ThenItemIsRet
   BOOST_CHECK(it != end(map));
   BOOST_CHECK_EQUAL(it->first, 123);
   BOOST_CHECK_EQUAL(it->second, "It!");
-}
+}*/
 
 BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenGettingSize_ThenZeroIsReturnd,
                               K,
@@ -443,7 +443,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenGettingSize_ThenZeroIsReturnd,
 
   BOOST_CHECK_EQUAL(map.getSize(), 0);
 }
-
+/*
 BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenGettingSize_ThenItemCountIsReturnd,
                               K,
                               TestedKeyTypes)
