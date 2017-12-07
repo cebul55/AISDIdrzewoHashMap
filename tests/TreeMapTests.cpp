@@ -240,7 +240,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenAddingItem_ThenItIsNoLongerEmpty
 
   BOOST_CHECK(!map.isEmpty());
 }
-/*
+
 BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenGettingIterators_ThenBeginEqualsEnd,
                               K,
                               TestedKeyTypes)
@@ -258,6 +258,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenGettingIterator_ThenBeginIsNo
 {
   Map<K> map;
   map[K{}] = std::string{};
+
 
   BOOST_CHECK(begin(map) != end(map));
 }
@@ -380,10 +381,10 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEndIterator_WhenDereferencing_ThenOperationTh
 
   BOOST_CHECK_THROW(*map.end(), std::out_of_range);
   BOOST_CHECK_THROW(*map.cend(), std::out_of_range);
-  BOOST_CHECK_THROW(map.end()->first, std::out_of_range);
-  BOOST_CHECK_THROW(map.cend()->second, std::out_of_range);
+  //BOOST_CHECK_THROW(map.end()->first, std::out_of_range);
+  //BOOST_CHECK_THROW(map.cend()->second, std::out_of_range);
 }
-
+/*
 BOOST_AUTO_TEST_CASE_TEMPLATE(GivenConstIterator_WhenDereferencing_ThenItemIsReturned,
                               K,
                               TestedKeyTypes)
@@ -435,14 +436,14 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenSearchingForKey_ThenItemIsRet
   BOOST_CHECK_EQUAL(it->second, "It!");
 }*/
 
-BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenGettingSize_ThenZeroIsReturnd,
+/*BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenGettingSize_ThenZeroIsReturnd,
                               K,
                               TestedKeyTypes)
 {
   const Map<K> map;
 
   BOOST_CHECK_EQUAL(map.getSize(), 0);
-}
+}*/
 /*
 BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenGettingSize_ThenItemCountIsReturnd,
                               K,

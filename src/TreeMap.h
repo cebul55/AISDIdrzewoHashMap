@@ -27,16 +27,17 @@ public:
   using iterator = Iterator;
   using const_iterator = ConstIterator;
 
-  Node *root;         /*empty node , which left child is treeroot*/
-  int nodeCount;
+           /*empty node , which left child is treeroot*/
+  Node *_root;
+  size_type _nodeCount;
 
 
 
-  TreeMap()           /*creating empty tree with one Node ( guard)*/
+  TreeMap()           /*creating empty tree with 2 Nodes ( _korzen and _guard,which is on the most right side of tree)*/
   {
-    auto *guard = new Node;
-    root = guard;
-    nodeCount = 0;
+    Node *node = new Node;
+    _root = node;
+    _nodeCount = 0;
   }
 
   TreeMap(std::initializer_list<value_type> list)
@@ -71,27 +72,25 @@ public:
 
   bool isEmpty() const
   {
-    if(root->left == nullptr)return true;
+    if(_nodeCount == 0)return true;
     return false;
   }
 
   mapped_type& operator[](const key_type& key)
   {
     //TODO adding item to map
-    (void)key;
-    throw std::runtime_error("TODaO");
-/*    if(isEmpty()){
-      auto node = new Node ;
-      node->key = key;
-      node->value = *key ;
-      nodeCount++;
-    }*/
+    Node *node = new Node(key, mapped_type{}) ;
+    _root->left = node;
+    node->parent = _root;
+    _nodeCount++;
+
+    return node->nodeElement.second;
   }
 
   const mapped_type& valueOf(const key_type& key) const
   {
-    (void)key;
-    throw std::runtime_error("TODO");
+      (void)key;
+      throw std::runtime_error("TODO");
   }
 
   mapped_type& valueOf(const key_type& key)
@@ -126,7 +125,7 @@ public:
 
   size_type getSize() const
   {
-    return nodeCount;
+    return _nodeCount;
   }
 
   bool operator==(const TreeMap& other) const
@@ -142,22 +141,36 @@ public:
 
   iterator begin()
   {
-    throw std::runtime_error("TODO");
+    Iterator *it = new Iterator;
+    Node *tmp = _root;
+    while(tmp->left != nullptr)
+      tmp = tmp->left;
+    it->ptr = tmp;
+    return *it;
   }
 
   iterator end()
   {
-    throw std::runtime_error("TODO");
+    Iterator *it = new Iterator;
+    it->ptr = _root;
+    return *it;
   }
 
   const_iterator cbegin() const
   {
-    throw std::runtime_error("TODO");
+    ConstIterator *it = new ConstIterator;
+    Node *tmp = _root;
+    while(tmp->left != nullptr)
+      tmp = tmp->left;
+    it->ptr = tmp;
+    return *it;
   }
 
   const_iterator cend() const
   {
-    throw std::runtime_error("TODO");
+    ConstIterator *it = new ConstIterator;
+    it->ptr = _root;
+    return *it;
   }
 
   const_iterator begin() const
@@ -175,19 +188,28 @@ template<typename KeyType, typename ValueType>
 class TreeMap<KeyType , ValueType>::Node
 {
 public:
-    Node *parent;       /*ptr to parent*/
-    Node *left;         /*ptr to left child*/
-    Node *right;        /*ptr to right child*/
-    KeyType key;        /*key value*/
-    ValueType value;    /*node value*/
-    int hight;          /*hight of highest subtree + 1*/
+    Node *parent;                  /*ptr to parent*/
+    Node *left;                    /*ptr to left child*/
+    Node *right;                   /*ptr to right child*/
+    value_type nodeElement;        /* pair<const key_type, mapped_type>*/
+    int hight;                     /*hight of highest subtree + 1*/
 
-    Node(){
+    Node()
+    {
       parent = nullptr;
       left = nullptr;
       right = nullptr;
       hight = 0;
     }
+
+    Node(const key_type key, mapped_type value):
+            nodeElement(std::make_pair(key,value))
+    {
+      parent = nullptr;
+      left = nullptr;
+      right = nullptr;
+      hight = 0;
+    };
 
 };
 
@@ -201,49 +223,100 @@ public:
   using value_type = typename TreeMap::value_type;
   using pointer = const typename TreeMap::value_type*;
 
+  Node *ptr;
+
   explicit ConstIterator()
-  {}
+  {
+    ptr = nullptr;
+  }
 
   ConstIterator(const ConstIterator& other)
   {
-    (void)other;
-    throw std::runtime_error("TODO");
+    *this= other;
   }
 
-  ConstIterator& operator++()
+  ConstIterator& operator++() /*preinkrementacja*/
   {
-    throw std::runtime_error("TODO");
+    if(this->ptr->parent == nullptr)throw std::out_of_range("Can't increment iterator end()");
+    Node *tmp = this->ptr;
+    Node *tmpParent = this->ptr->parent;
+    if(tmp->right != nullptr){
+      tmp = tmp->right;
+      while(tmp->left != nullptr)
+        tmp = tmp->left;
+    }
+    else if(tmpParent->left == tmp)
+      tmp = tmp->parent;
+    else if(tmpParent->right == tmp){
+      while(tmpParent->right == tmp){
+        tmp = tmpParent;
+        tmpParent = tmpParent->parent;
+      }
+      tmp = tmp->parent;
+    }
+    this->ptr = tmp;
+    return *this;
   }
 
   ConstIterator operator++(int)
   {
-    throw std::runtime_error("TODO");
+    const_iterator copy = *this;
+    ++(*this);
+    return copy;
   }
 
-  ConstIterator& operator--()
+  ConstIterator& operator--() /*predekrementacja*/
   {
-    throw std::runtime_error("TODO");
+    //sprawdz czy nie wywolujesz --begin()
+    Node *tmp = this->ptr;
+    if(tmp->left != nullptr){
+        tmp = tmp->left;
+        while(tmp->right != nullptr)
+            tmp= tmp->right;
+    }
+    else if(tmp->parent == nullptr)throw std::out_of_range("can't decrement begin()");
+    else if (tmp->parent->right == tmp){
+        tmp = tmp->parent;
+    }
+    else if(tmp->parent->left == tmp){
+        Node *tmpCopy = tmp;
+        while(tmpCopy->parent != nullptr && tmpCopy->parent->left == tmpCopy ){
+            tmpCopy = tmpCopy->parent;
+        }
+        if(tmpCopy == nullptr)throw std::out_of_range("can't decrement begin()");
+        while(tmp->parent->left == tmp)
+            tmp = tmp->parent;
+        tmp = tmp->parent;
+    }
+      this->ptr = tmp;
+      return *this;
   }
 
   ConstIterator operator--(int)
   {
-    throw std::runtime_error("TODO");
+      const_iterator copy = *this;
+      --(*this);
+      return copy;
   }
+
 
   reference operator*() const
   {
-    throw std::runtime_error("TODO");
+    if( ptr->parent == nullptr)throw std::out_of_range("Getting to nullptr");
+    return ptr->nodeElement;
   }
 
   pointer operator->() const
   {
-    return &this->operator*();
+      if(ptr->parent == nullptr)throw std::out_of_range("Getting to contest of nullptr");
+      return &this->operator*();
   }
 
   bool operator==(const ConstIterator& other) const
   {
-    (void)other;
-    throw std::runtime_error("TODO");
+    if(ptr == other.ptr)
+      return true;
+    return false;
   }
 
   bool operator!=(const ConstIterator& other) const
