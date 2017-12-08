@@ -40,34 +40,49 @@ public:
     _nodeCount = 0;
   }
 
-  TreeMap(std::initializer_list<value_type> list)
+    //todo treeMap delete
+/*  ~TreeMap(){
+    _clear(_root->left);
+  }*/
+
+  TreeMap(std::initializer_list<value_type> list): TreeMap()
   {
-    (void)list; // disables "unused argument" warning, can be removed when method is implemented.
-    throw std::runtime_error("TODO");
+    for(auto& a : list) valueOf(a.first) = a.second;
   }
 
-  TreeMap(const TreeMap& other)
+  TreeMap(const TreeMap& other) : TreeMap()
   {
-    (void)other;
-    throw std::runtime_error("TODO");
+    for (auto& a : other) valueOf(a.first) = a.second;
   }
 
   TreeMap(TreeMap&& other)
   {
-    (void)other;
-    throw std::runtime_error("TODO");
+    _nodeCount = other._nodeCount;
+    _root = other._root;
+    other._nodeCount = 0;
+    other._root = nullptr;
   }
 
   TreeMap& operator=(const TreeMap& other)
   {
-    (void)other;
-    throw std::runtime_error("TODO");
+    if(this == &other) return *this;
+    _clear(_root);
+    _nodeCount=0;
+    _root = other._root;
+
+    for (auto& a : other) valueOf(a.first) = a.second;
+    return *this;
   }
 
   TreeMap& operator=(TreeMap&& other)
   {
-    (void)other;
-    throw std::runtime_error("TODO");
+    _clear(_root);
+    _nodeCount = other._nodeCount;
+    _root = other._root;
+    other._root = nullptr;
+    other._nodeCount = 0;
+
+    return *this;
   }
 
   bool isEmpty() const
@@ -79,42 +94,62 @@ public:
   mapped_type& operator[](const key_type& key)
   {
 
-    //TODO adding item to map
-   // if(_nodeCount == 0) {
+    return valueOf(key);
+
+  }
+
+  const mapped_type& valueOf(const key_type& key) const
+  {
+      const_iterator it = find(key);
+      if(it == cend())throw std::out_of_range("no such key");
+
+      return it->second;
+  }
+
+  mapped_type& valueOf(const key_type& key)
+  {
+    if(_nodeCount == 0) {
       Node *node = new Node(key, mapped_type{});
       _root->left = node;
       node->parent = _root;
       _nodeCount++;
 
       return node->nodeElement.second;
-/*    }
+    }
     else{
-      const_iterator it = find(key);
-      if(it != cend()){
-        return it->second;
+      Node *pos = _root->left;
+      while (true){
+        key_type k = pos->nodeElement.first;
+
+        if(k == key)
+          return pos->nodeElement.second;
+
+        Node *tmp;
+        if(k < key)
+          tmp = pos->right;
+        else
+          tmp = pos->left;
+
+        if(tmp == nullptr){
+          Node *node = new Node(key, mapped_type{});
+          node->parent = pos;
+          if(k<key)
+            pos->right = node;
+          else
+            pos->left = node;
+
+          _nodeCount++;
+          return node->nodeElement.second;
+        }
+
+        pos = tmp;
       }
-      else{
-        Node *tmp = _root;
-        while()
-      }
-    }*/
+    }
   }
 
-  const mapped_type& valueOf(const key_type& key) const
+  const_iterator _find(const key_type& key) const
   {
-      (void)key;
-      throw std::runtime_error("TODO");
-  }
-
-  mapped_type& valueOf(const key_type& key)
-  {
-    (void)key;
-    throw std::runtime_error("TODO");
-  }
-
-  const_iterator find(const key_type& key) const
-  {
-    Node *tmp = _root;
+    Node *tmp = _root->left;
     while(tmp != nullptr){
       if(tmp->nodeElement.first == key)
         return ConstIterator(tmp);
@@ -127,22 +162,109 @@ public:
     return cend();
   }
 
-  iterator _find(const key_type& key)
+  const_iterator find(const key_type& key) const
+    {
+      return _find(key);
+    }
+
+  iterator find(const key_type& key)
   {
-    ConstIterator it = find(key);
+    ConstIterator it = _find(key);
       return iterator(it);
+  }
+
+  void _clear(Node *root){
+    if(root != nullptr){
+      _clear(root->right);
+      _clear(root->left);
+      delete root;
+    }
   }
 
   void remove(const key_type& key)
   {
-    (void)key;
-    throw std::runtime_error("TODO");
+    remove(find(key));
   }
 
   void remove(const const_iterator& it)
   {
-    (void)it;
-    throw std::runtime_error("TODO");
+    if(it == cend())throw std::out_of_range("No such node");
+
+    Node *toDestroy = it.ptr;
+    Node *parent = it.ptr->parent;
+    Node *left = it.ptr->left;
+    Node *right = it.ptr->right;
+
+    if(left == nullptr && right == nullptr){
+      if(parent->right == toDestroy)
+        parent->right = nullptr;
+      else
+        parent->left = nullptr;
+
+      /*toDestroy->parent= nullptr;
+      (&toDestroy->nodeElement).~value_type();*/
+      delete toDestroy;
+    }
+    else if(left != nullptr && right != nullptr){
+      Node *tmp; /*wskaznik na node ktory bedziemy przepinac*/
+      if(parent->left == toDestroy){
+        tmp = toDestroy->right;
+        while(tmp->left != nullptr)
+          tmp = tmp->left;
+
+        //mamy juz odpowiednie wskazniki ustawione teraz nastepuje przepinanie
+        parent->left = right;
+        right->parent = parent;
+        tmp->left = left;
+        left->parent = tmp;
+
+        /*toDestroy->parent = toDestroy->left = toDestroy->right = nullptr;
+        (&toDestroy->nodeElement).~value_type();*/
+        delete toDestroy;
+      }
+      else {
+        tmp = toDestroy->left;
+        while(tmp->right != nullptr)
+          tmp = tmp->right;
+
+        parent->right = left;
+        left->parent = parent;
+        tmp->right = right;
+        right->parent = tmp;
+
+        /*toDestroy->parent = toDestroy->left = toDestroy->right = nullptr;
+        (&toDestroy->nodeElement).~value_type();*/
+        delete toDestroy;
+      }
+    }
+    else{
+      //istnieje 1 dziecko
+      if(parent->right == toDestroy){
+        if(right!= nullptr){
+          parent->right = right;
+          right->parent = parent;
+        }
+        else{
+          parent->right = left;
+          left->parent = parent;
+        }
+      }
+      else{
+        if(right!= nullptr){
+          parent->left = right;
+          right->parent = parent;
+        }
+        else{
+          parent->left=left;
+          left->parent = parent;
+        }
+      }
+
+      /*toDestroy->parent = toDestroy->left = toDestroy->right = nullptr;
+      (&toDestroy->nodeElement).~value_type();*/
+      delete toDestroy;
+    }
+    _nodeCount--;
   }
 
   size_type getSize() const
@@ -152,8 +274,15 @@ public:
 
   bool operator==(const TreeMap& other) const
   {
-    (void)other;
-    throw std::runtime_error("TODO");
+    if(getSize() != other.getSize())return false;
+
+    ConstIterator a = cbegin();
+    ConstIterator b = other.cbegin();
+    while(a != cend() && b != other.cend()){
+      if(*a++ != *b++)return false;
+    }
+
+    return true;
   }
 
   bool operator!=(const TreeMap& other) const
@@ -232,6 +361,14 @@ public:
       right = nullptr;
       hight = 0;
     };
+
+    ~Node(){
+      //parent = left = right = nullptr;
+      (&nodeElement)->~value_type();
+      //operator delete(parent);
+      //operator delete(left);
+      //operator delete(right);
+    }
 
 };
 

@@ -30,14 +30,18 @@ int main(int argc, char** argv)
 }
 */
 int main(){
-  Map<int,int> l;
-  l[10];
+     Map<int,int> map;
+    Map<int,int> other = { { 42, 5 }, { 27, 20 } };
+
+    other = map;
+    std::cout<<other.isEmpty()<<std::endl;
+/*  l[10];
     int a = 2;
     char b;
     b = 'A'+((a-- != 1)? 0 : 1);
     std::cout<<a<<std::endl;
     std::cout<<b<<std::endl;
-    std::cout<<(7<<2)<<std::endl;
+    std::cout<<(7<<2)<<std::endl;*/
 
 /*
     if(l.begin() != l.end())
