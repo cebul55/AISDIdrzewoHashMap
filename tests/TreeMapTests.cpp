@@ -384,7 +384,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEndIterator_WhenDereferencing_ThenOperationTh
   //BOOST_CHECK_THROW(map.end()->first, std::out_of_range);
   //BOOST_CHECK_THROW(map.cend()->second, std::out_of_range);
 }
-/*
+
 BOOST_AUTO_TEST_CASE_TEMPLATE(GivenConstIterator_WhenDereferencing_ThenItemIsReturned,
                               K,
                               TestedKeyTypes)
@@ -408,7 +408,6 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenSearchingForKey_ThenEndIsReturne
 
   BOOST_CHECK(it == end(map));
 }
-
 BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenSearchingForMissingKey_ThenEndIsReturned,
                               K,
                               TestedKeyTypes)
@@ -420,7 +419,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenSearchingForMissingKey_ThenEn
 
   BOOST_CHECK(it == end(map));
 }
-
+/*
 BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenSearchingForKey_ThenItemIsReturned,
                               K,
                               TestedKeyTypes)

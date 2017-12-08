@@ -78,13 +78,26 @@ public:
 
   mapped_type& operator[](const key_type& key)
   {
-    //TODO adding item to map
-    Node *node = new Node(key, mapped_type{}) ;
-    _root->left = node;
-    node->parent = _root;
-    _nodeCount++;
 
-    return node->nodeElement.second;
+    //TODO adding item to map
+   // if(_nodeCount == 0) {
+      Node *node = new Node(key, mapped_type{});
+      _root->left = node;
+      node->parent = _root;
+      _nodeCount++;
+
+      return node->nodeElement.second;
+/*    }
+    else{
+      const_iterator it = find(key);
+      if(it != cend()){
+        return it->second;
+      }
+      else{
+        Node *tmp = _root;
+        while()
+      }
+    }*/
   }
 
   const mapped_type& valueOf(const key_type& key) const
@@ -101,14 +114,23 @@ public:
 
   const_iterator find(const key_type& key) const
   {
-    (void)key;
-    throw std::runtime_error("TODO");
+    Node *tmp = _root;
+    while(tmp != nullptr){
+      if(tmp->nodeElement.first == key)
+        return ConstIterator(tmp);
+      if(key > tmp->nodeElement.first)
+        tmp= tmp->right;
+      else
+        tmp = tmp->left;
+
+    }
+    return cend();
   }
 
-  iterator find(const key_type& key)
+  iterator _find(const key_type& key)
   {
-    (void)key;
-    throw std::runtime_error("TODO");
+    ConstIterator it = find(key);
+      return iterator(it);
   }
 
   void remove(const key_type& key)
@@ -230,6 +252,10 @@ public:
     ptr = nullptr;
   }
 
+  ConstIterator(Node *node){
+    ptr = node;
+  }
+
   ConstIterator(const ConstIterator& other)
   {
     *this= other;
@@ -308,7 +334,6 @@ public:
 
   pointer operator->() const
   {
-      if(ptr->parent == nullptr)throw std::out_of_range("Getting to contest of nullptr");
       return &this->operator*();
   }
 

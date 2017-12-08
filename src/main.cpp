@@ -34,9 +34,10 @@ int main(){
   l[10];
     int a = 2;
     char b;
-    b = ('A'+(a-- != 1) )? 0 : 1;
+    b = 'A'+((a-- != 1)? 0 : 1);
     std::cout<<a<<std::endl;
     std::cout<<b<<std::endl;
+    std::cout<<(7<<2)<<std::endl;
 
 /*
     if(l.begin() != l.end())
