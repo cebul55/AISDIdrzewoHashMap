@@ -18,7 +18,6 @@ void perfomTest()
   map[1] = "TODO";
 }
 */
-    //TODO test line 384 385
 } // namespace
 /*
 int main(int argc, char** argv)
@@ -30,25 +29,14 @@ int main(int argc, char** argv)
 }
 */
 int main(){
-     Map<int,int> map;
+/*    //Map<int,int> *map = new Map<int,int>;
+    Map<int,int> map;
     Map<int,int> other = { { 42, 5 }, { 27, 20 } };
 
-    other = map;
-    std::cout<<other.isEmpty()<<std::endl;
-/*  l[10];
-    int a = 2;
-    char b;
-    b = 'A'+((a-- != 1)? 0 : 1);
-    std::cout<<a<<std::endl;
-    std::cout<<b<<std::endl;
-    std::cout<<(7<<2)<<std::endl;*/
-
-/*
-    if(l.begin() != l.end())
-    std::cout<<"true"<<std::endl;
-  else
-    std::cout<<"false"<<std::endl;
-  std::cout<<l.begin()->first<<std::endl;
-  std::cout<<l.end()->first<<std::endl;
-*/
+    map = other;
+    std::cout<<other.isEmpty()<<std::endl;*/
+    Map<int,int> map = { { 42, 5 }, { 27, 20 } };
+    map.remove(27);
+    //map._clear(map._root);
+    std::cout<<map.begin()->second;
 }
