@@ -1,6 +1,6 @@
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
-add_executable(aisdiMapsTests test_main.cpp TreeMapTests.cpp )
+add_executable(aisdiMapsTests test_main.cpp HashMapTests.cpp  )
 target_link_libraries(aisdiMapsTests ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})
 
 add_test(boostUnitTestsRun aisdiMapsTests)

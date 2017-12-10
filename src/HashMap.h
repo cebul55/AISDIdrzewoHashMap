@@ -7,6 +7,8 @@
 #include <utility>
 #include <iostream>
 
+#define PRIMENUMBER 64081
+
 namespace aisdi
 {
 
@@ -26,8 +28,14 @@ public:
   using iterator = Iterator;
   using const_iterator = ConstIterator;
 
+  size_type _mapSize;
+  int _index[PRIMENUMBER] = {};   /*array of idexes, stores information of how many elements are in a bucket */
+  value_type* _hashMap[PRIMENUMBER] = {};
+
   HashMap()
-  {}
+  {
+    _mapSize = 0;
+  }
 
   HashMap(std::initializer_list<value_type> list)
   {
@@ -61,13 +69,23 @@ public:
 
   bool isEmpty() const
   {
-    throw std::runtime_error("TODO");
+    return  (_mapSize==0);
   }
 
   mapped_type& operator[](const key_type& key)
   {
-    (void)key;
-    throw std::runtime_error("TODO");
+    //return valueOf(key);
+    if(getSize() == 0){
+      value_type pair(key,mapped_type{});
+      //_hashMap[key%PRIMENUMBER].first=key;
+      //_hashMap[key%PRIMENUMBER].second=mapped_type{};
+      _hashMap[key%PRIMENUMBER]=&pair;
+      _index[key%PRIMENUMBER]++;
+      _mapSize++;
+      return _hashMap[key%PRIMENUMBER]->second;
+    }
+    else throw std::out_of_range("not implemented yet");
+    return _hashMap[key%PRIMENUMBER]->second;
   }
 
   const mapped_type& valueOf(const key_type& key) const
@@ -108,7 +126,7 @@ public:
 
   size_type getSize() const
   {
-    throw std::runtime_error("TODO");
+    return _mapSize;
   }
 
   bool operator==(const HashMap& other) const
@@ -124,22 +142,42 @@ public:
 
   iterator begin()
   {
-    throw std::runtime_error("TODO");
+    //throw std::runtime_error("TODO");
+    iterator it;
+    for(int i = 0 ; i< PRIMENUMBER ; i++){
+      if(_index[i] != 0){
+        it._notEmptyBucket=i;
+        break;
+      }
+    }
+    return it;
   }
 
   iterator end()
   {
-    throw std::runtime_error("TODO");
+    //throw std::runtime_error("TODO");
+    iterator it;
+    return it;
   }
 
   const_iterator cbegin() const
   {
-    throw std::runtime_error("TODO");
+    //throw std::runtime_error("TODO");
+    const_iterator it;
+    for(int i = 0 ; i< PRIMENUMBER ; i++){
+      if(_index[i] != 0){
+        it._notEmptyBucket=i;
+        break;
+      }
+    }
+    return it;
   }
 
   const_iterator cend() const
   {
-    throw std::runtime_error("TODO");
+    //throw std::runtime_error("TODO");
+    const_iterator it;
+    return it;
   }
 
   const_iterator begin() const
@@ -162,8 +200,12 @@ public:
   using value_type = typename HashMap::value_type;
   using pointer = const typename HashMap::value_type*;
 
+  int _notEmptyBucket;
+
   explicit ConstIterator()
-  {}
+  {
+    _notEmptyBucket = -1;
+  }
 
   ConstIterator(const ConstIterator& other)
   {
@@ -194,6 +236,8 @@ public:
   reference operator*() const
   {
     throw std::runtime_error("TODO");
+    if(_notEmptyBucket == -1)throw std::out_of_range("calling iterator end()");
+
   }
 
   pointer operator->() const
@@ -203,8 +247,7 @@ public:
 
   bool operator==(const ConstIterator& other) const
   {
-    (void)other;
-    throw std::runtime_error("TODO");
+    return (_notEmptyBucket == other._notEmptyBucket);
   }
 
   bool operator!=(const ConstIterator& other) const
