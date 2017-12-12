@@ -40,11 +40,13 @@ public:
     _nodeCount = 0;
   }
 
-    //todo treeMap delete
  ~TreeMap(){
-    //_clear(_root->left);
-        //delete(_root);
-        _nodeCount = 0;
+        if(_root!=nullptr && _root->left!= nullptr ) {
+            _clear(_root->left);
+            delete _root;
+            _root = nullptr;
+            _nodeCount = 0;
+        }
   }
 
   TreeMap(std::initializer_list<value_type> list): TreeMap()
@@ -68,17 +70,15 @@ public:
   TreeMap& operator=(const TreeMap& other)
   {
     if(this == &other) return *this;
-    _clear(_root);
+    _clear(_root->left);
     _nodeCount=0;
-    _root = other._root;
-
     for (auto& a : other) valueOf(a.first) = a.second;
     return *this;
   }
 
   TreeMap& operator=(TreeMap&& other)
   {
-    _clear(_root);
+    _clear(_root->left);
     _nodeCount = other._nodeCount;
     _root = other._root;
     other._root = nullptr;
@@ -179,7 +179,7 @@ public:
     if(root != nullptr){
       _clear(root->right);
       _clear(root->left);
-      delete root;
+      remove(root->nodeElement.first);
     }
   }
 
@@ -294,7 +294,6 @@ public:
 
   iterator begin()
   {
-    //Iterator *it = new Iterator;
       iterator it;
     Node *tmp = _root;
     while(tmp->left != nullptr)
@@ -305,7 +304,6 @@ public:
 
   iterator end()
   {
-    //Iterator *it = new Iterator;
       iterator it;
       it.ptr = _root;
     return it;
@@ -325,7 +323,6 @@ public:
 
   const_iterator cend() const
   {
-    //ConstIterator *it = new ConstIterator;
       const_iterator it;
 
       it.ptr = _root;
@@ -371,11 +368,7 @@ public:
     };
 
     ~Node(){
-      //parent = left = right = nullptr;
-        (&nodeElement)->~value_type();
-        //operator delete(parent);
-      //operator delete(left);
-      //operator delete(right);
+      (&nodeElement)->~value_type();
     }
 
 };

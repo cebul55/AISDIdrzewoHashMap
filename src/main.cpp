@@ -36,7 +36,12 @@ int main(){
     map = other;
     std::cout<<other.isEmpty()<<std::endl;*/
     Map<int,int> map = { { 42, 5 }, { 27, 20 } };
-    map.remove(27);
+//    Map<int,int> map1;
+    Map<int,int> map2{std::move(map)};
+    //map = map2;
+    //map.remove(27);
     //map._clear(map._root);
-    std::cout<<map.begin()->second;
+//    std::cout<<map.begin()->second;
+
+    std::cout<<map2.isEmpty();
 }
