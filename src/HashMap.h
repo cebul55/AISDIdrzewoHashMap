@@ -6,6 +6,7 @@
 #include <stdexcept>
 #include <utility>
 #include <iostream>
+#include <boost/concept_check.hpp>
 
 
 namespace aisdi {
@@ -145,56 +146,38 @@ namespace aisdi {
         }
 
         iterator begin() {
-            //throw std::runtime_error("TODO");
-            //iterator it(_hashTable);
-            iterator it;
             if(_size==0) {
-                it.ptr = _hashTable[_tableSize];
-                it.index = _tableSize;
+                return iterator(this);
             }
             else{
                 unsigned long i = 0;
                 while(i<_tableSize && _hashTable[i] == nullptr){
                     ++i;
                 }
-                it.ptr = _hashTable[i];
-                it.index=i;
+                return iterator(this,_hashTable[i],i);
             }
-            return it;
         }
 
         iterator end() {
-            //throw std::runtime_error("TODO");
-            //iterator it(_hashTable);
-            iterator it;
-            it.ptr = _hashTable[_tableSize];
-            it.index = _tableSize;
+            iterator it(this);
             return it;
         }
 
         const_iterator cbegin() const {
-            //throw std::runtime_error("TODO");
-            const_iterator it(_hashTable);
             if(_size==0) {
-                it.ptr = _hashTable[_tableSize];
-                it.index = _tableSize;
+                return const_iterator(this);
             }
             else{
                 unsigned long i = 0;
                 while(i<_tableSize && _hashTable[i]== nullptr){
                     ++i;
                 }
-                it.ptr = _hashTable[i];
-                it.index=i;
+                return const_iterator (this,_hashTable[i],i);
             }
-            return it;
         }
 
         const_iterator cend() const {
-            //throw std::runtime_error("TODO");
-            const_iterator it(_hashTable);
-            it.ptr = _hashTable[_tableSize];
-            it.index=_tableSize;
+            const_iterator it(this);
             return it;
         }
 
@@ -215,23 +198,22 @@ namespace aisdi {
         using value_type = typename HashMap::value_type;
         using pointer = const typename HashMap::value_type *;
 
+        const HashMap *myMap;
         HashNode *ptr;
         size_type index;
-        HashNode **table;
 
-        explicit ConstIterator() {
-            ptr = nullptr;
-            index=0;
-        }
-        ConstIterator(HashNode **hashTable):ConstIterator(){
-            table = hashTable;
 
-        }
+        explicit ConstIterator(const HashMap *table= nullptr , HashNode *ptr = nullptr, size_type index = 0):
+        myMap(table),
+        ptr(ptr),
+        index(index)
+        {
+            if(table!= nullptr && ptr == nullptr)
+                this->index = table->_tableSize;
+        };
 
-        ConstIterator(const ConstIterator &other) {
-            ptr = other.ptr;
-            index= other.index;
-        }
+        ConstIterator(const ConstIterator &other):ConstIterator(other.myMap, other.ptr, other.index)
+        {}
 
         ConstIterator &operator++() {
             //throw std::runtime_error("TODO");
@@ -239,28 +221,52 @@ namespace aisdi {
             if(ptr->next != nullptr)
                 ptr = ptr->next;
             else{
-                while(index <= _tableSize || table[index]!=nullptr){
+                ++index;
+                while(index < myMap->_tableSize && myMap->_hashTable[index] == nullptr){
                     ++index;
                 }
-                ptr = table[index];
+                if(index >= myMap->_tableSize)
+                    ptr = nullptr;
+                else
+                    ptr = myMap->_hashTable[index];
             }
             return *this;
         }
 
         ConstIterator operator++(int) {
-            throw std::runtime_error("TODO");
+            ConstIterator tmp = *this;
+            ++(*this);
+            return tmp;
         }
 
         ConstIterator &operator--() {
-            throw std::runtime_error("TODO");
+            if(myMap == nullptr)throw std::out_of_range("can't decrement iterator");
+            else if(ptr == nullptr || ptr == myMap->_hashTable[index]) {
+                --index;
+                while (index > 0 && myMap->_hashTable[index] == nullptr)
+                    --index;
+                if (index == 0 && myMap->_hashTable[index] == nullptr)
+                    throw std::out_of_range("can't decrement iterator");
+
+                ptr = myMap->_hashTable[index];
+                while (ptr->next != nullptr)
+                    ptr = ptr->next;
+            }
+            else{
+                ptr = ptr->prev;
+            }
+            return *this;
         }
 
         ConstIterator operator--(int) {
-            throw std::runtime_error("TODO");
+            const_iterator tmp = *this;
+            --(*this);
+            return tmp;
         }
 
         reference operator*() const {
             //throw std::runtime_error("TODO");
+            if(index == myMap->_tableSize)throw std::out_of_range("can't dereference end()");
             return ptr->nodeElement;
         }
 
@@ -269,8 +275,6 @@ namespace aisdi {
         }
 
         bool operator==(const ConstIterator &other) const {
-            /*(void) other;
-            throw std::runtime_error("TODO");*/
             return(ptr == other.ptr && index==other.index);
         }
 
@@ -285,7 +289,8 @@ namespace aisdi {
         using reference = typename HashMap::reference;
         using pointer = typename HashMap::value_type *;
 
-        explicit Iterator() {}
+        explicit Iterator(const HashMap *table= nullptr , HashNode *ptr = nullptr, size_type index = 0):ConstIterator(table,ptr,index)
+        {}
 
         Iterator(const ConstIterator &other)
                 : ConstIterator(other) {}

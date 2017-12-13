@@ -49,9 +49,9 @@ int main(){
     std::cout<<map2.isEmpty();*/
     Hash<int,int> map;
     map[23]=32;
-    auto it = (map.cbegin());
-    ++it;
-    std::cout<<map.begin()->first<<std::endl;
+    auto it = (map.end());
+    --it;
+    std::cout<<it->first<<std::endl;
    // std::cout<<it->second;
-    std::cout<<(map.cend()==it)<<std::endl;
+    //std::cout<<(map.cend()==it)<<std::endl;
 }
