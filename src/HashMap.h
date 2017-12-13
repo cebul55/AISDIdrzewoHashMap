@@ -239,7 +239,7 @@ namespace aisdi {
             if(ptr->next != nullptr)
                 ptr = ptr->next;
             else{
-                while(index <= _tableSize && table[index]!=nullptr){
+                while(index <= _tableSize || table[index]!=nullptr){
                     ++index;
                 }
                 ptr = table[index];

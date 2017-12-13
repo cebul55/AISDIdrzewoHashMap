@@ -11,6 +11,9 @@ namespace
 template <typename K, typename V>
 using Map = aisdi::TreeMap<K, V>;
 
+    template <typename K, typename V>
+    using Hash = aisdi::HashMap<K, V>;
+
 /*
 void perfomTest()
 {
@@ -34,7 +37,7 @@ int main(){
     Map<int,int> other = { { 42, 5 }, { 27, 20 } };
 
     map = other;
-    std::cout<<other.isEmpty()<<std::endl;*/
+    std::cout<<other.isEmpty()<<std::endl;*//*
     Map<int,int> map = { { 42, 5 }, { 27, 20 } };
 //    Map<int,int> map1;
     Map<int,int> map2{std::move(map)};
@@ -43,5 +46,12 @@ int main(){
     //map._clear(map._root);
 //    std::cout<<map.begin()->second;
 
-    std::cout<<map2.isEmpty();
+    std::cout<<map2.isEmpty();*/
+    Hash<int,int> map;
+    map[23]=32;
+    auto it = (map.cbegin());
+    ++it;
+    std::cout<<map.begin()->first<<std::endl;
+   // std::cout<<it->second;
+    std::cout<<(map.cend()==it)<<std::endl;
 }
