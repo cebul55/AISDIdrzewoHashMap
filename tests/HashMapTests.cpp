@@ -408,9 +408,9 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenSearchingForKey_ThenEndIsReturne
   const auto it = map.find(123);
 
   BOOST_CHECK(it == end(map));
-}
+}*/
 
-BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenSearchingForMissingKey_ThenEndIsReturned,
+/*BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenSearchingForMissingKey_ThenEndIsReturned,
                               K,
                               TestedKeyTypes)
 {
@@ -420,8 +420,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenSearchingForMissingKey_ThenEn
   const auto it = map.find(123);
 
   BOOST_CHECK(it == end(map));
-}
-
+}*/
+/*
 BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenSearchingForKey_ThenItemIsReturned,
                               K,
                               TestedKeyTypes)
@@ -767,7 +767,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenTwoEquivalentMaps_WhenComparingThem_ThenTheyA
 
   BOOST_CHECK(map == other);
 }
-
+*/
+/*
 BOOST_AUTO_TEST_CASE_TEMPLATE(GivenTwoMapsWithDifferentValues_WhenComparingThem_ThenTheyAreNotEqual,
                               K,
                               TestedKeyTypes)
@@ -788,6 +789,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenTwoMapsWithDifferentKeys_WhenComparingThem_Th
   BOOST_CHECK(map != other);
 }
 */
+
 
 // ConstIterator is tested via Iterator methods.
 // If Iterator methods are to be changed, then new ConstIterator tests are required.
