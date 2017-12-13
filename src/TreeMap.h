@@ -202,8 +202,6 @@ public:
       else
         parent->left = nullptr;
 
-      /*toDestroy->parent= nullptr;
-      (&toDestroy->nodeElement).~value_type();*/
       delete toDestroy;
     }
     else if(left != nullptr && right != nullptr){
@@ -219,8 +217,6 @@ public:
         tmp->left = left;
         left->parent = tmp;
 
-        /*toDestroy->parent = toDestroy->left = toDestroy->right = nullptr;
-        (&toDestroy->nodeElement).~value_type();*/
         delete toDestroy;
       }
       else {
@@ -233,8 +229,6 @@ public:
         tmp->right = right;
         right->parent = tmp;
 
-        /*toDestroy->parent = toDestroy->left = toDestroy->right = nullptr;
-        (&toDestroy->nodeElement).~value_type();*/
         delete toDestroy;
       }
     }

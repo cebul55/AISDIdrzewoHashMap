@@ -56,33 +56,48 @@ namespace aisdi {
     public:
 
         HashMap() {
-            _hashTable = new HashNode*[_tableSize+1]{nullptr};  //begin() i end() beda wskazywaly na ostatnia komorke tabeli
+            _hashTable = new HashNode* [_tableSize+1]{nullptr};  //begin() i end() beda wskazywaly na ostatnia komorke tabeli
             _size = 0;
         }
 
-        HashMap(std::initializer_list<value_type> list) {
-            (void) list; // disables "unused argument" warning, can be removed when method is implemented.
-            throw std::runtime_error("TODO");
+        HashMap(std::initializer_list<value_type> list): HashMap()
+        {
+            for(auto& a: list)valueOf(a.first)=a.second;
         }
 
-        HashMap(const HashMap &other) {
-            (void) other;
-            throw std::runtime_error("TODO");
+        HashMap(const HashMap &other):HashMap() {
+            for (auto& a : other) valueOf(a.first) = a.second;
         }
 
         HashMap(HashMap &&other) {
-            (void) other;
-            throw std::runtime_error("TODO");
+            _hashTable = other._hashTable;
+            _size = other._size;
+            other._hashTable = nullptr;
+            other._size=0;
         }
 
         HashMap &operator=(const HashMap &other) {
-            (void) other;
-            throw std::runtime_error("TODO");
+            /*(void) other;
+            throw std::runtime_error("TODO");*/
+            if(*this == other)return *this;
+            _clear();
+            _size=0;
+            for(auto& a: other)valueOf(a.first) = a.second;
+            return *this;
         }
 
         HashMap &operator=(HashMap &&other) {
-            (void) other;
-            throw std::runtime_error("TODO");
+            _clear();
+            _hashTable = other._hashTable;
+            _size = other._size;
+            other._hashTable = nullptr;
+            other._size = 0;
+            return *this;
+        }
+        ~HashMap(){
+            if(_size!=0)
+                _clear();
+            delete _hashTable;
         }
 
         bool isEmpty() const {
@@ -90,46 +105,142 @@ namespace aisdi {
         }
 
         mapped_type &operator[](const key_type &key) {
-            /*(void) key;
-            throw std::runtime_error("TODO");*/
-            //size_type hashKey = hashFunction(key);
-            HashNode *node= nullptr;
-            if(_size == 0){
-                node = new HashNode(key, mapped_type{});
-                _hashTable[key]=node;
-                ++_size;
-            }
-            return node->nodeElement.second;
+            return valueOf(key);
         }
 
         const mapped_type &valueOf(const key_type &key) const {
-            (void) key;
-            throw std::runtime_error("TODO");
+            /*(void) key;
+            throw std::runtime_error("TODO");*/
+            const_iterator it = find(key);
+            if(it == cend())throw std::out_of_range("no such key");
+
+            return it->second;
         }
 
         mapped_type &valueOf(const key_type &key) {
-            (void) key;
-            throw std::runtime_error("TODO");
+            /*(void) key;
+            throw std::runtime_error("TODO");*/
+            size_type hashKey = stupidHashFunction(key);
+            if(_size == 0){
+                HashNode *node = new HashNode(key,mapped_type{});
+                _hashTable[hashKey]=node;
+                ++_size;
+                return node->nodeElement.second;
+            }
+            else{
+                if(_hashTable[hashKey]== nullptr){
+                    HashNode *node = new HashNode(key,mapped_type{});
+                    _hashTable[hashKey]=node;
+                    ++_size;
+                    return node->nodeElement.second;
+                }
+                else{
+                    HashNode *tmp = _hashTable[hashKey];
+                    while(tmp != nullptr ){
+                        if(tmp->nodeElement.first == key) {
+                            if (tmp->nodeElement.second != mapped_type{})
+                                tmp->nodeElement.second = mapped_type{};
+                            return tmp->nodeElement.second;
+                        }
+                        else
+                            tmp = tmp->next;
+                    }
+                    /*if (tmp->nodeElement.second != mapped_type{}) {
+                        tmp->nodeElement.second = mapped_type{};
+                        return tmp->nodeElement.second;
+                    }
+                    else {*/
+                        HashNode *node = new HashNode(key, mapped_type{});
+                        tmp->next = node;
+                        node->prev = tmp;
+                        node->next = nullptr;
+                        ++_size;
+                        return node->nodeElement.second;
+                    //}
+                }
+            }
+        }
+
+        const_iterator _find(const key_type& key) const
+        {
+            size_type hashKey = stupidHashFunction(key);
+            if(_hashTable[hashKey]!= nullptr){
+                HashNode *tmp = _hashTable[hashKey];
+                while(tmp!= nullptr){
+                    if(tmp->nodeElement.first==key)
+                        return const_iterator(this,tmp,hashKey);
+                    tmp=tmp->next;
+                }
+            }
+            return const_iterator (this);
         }
 
         const_iterator find(const key_type &key) const {
-            (void) key;
-            throw std::runtime_error("TODO");
+            return _find(key);
         }
 
         iterator find(const key_type &key) {
-            (void) key;
-            throw std::runtime_error("TODO");
+            const_iterator it = _find(key);
+            return iterator(it);
         }
 
         void remove(const key_type &key) {
-            (void) key;
-            throw std::runtime_error("TODO");
+            return remove(find(key));
         }
 
         void remove(const const_iterator &it) {
-            (void) it;
-            throw std::runtime_error("TODO");
+            if(it == cend())throw std::out_of_range("No such node");
+
+            HashNode *tmp = it.ptr;
+            if(tmp->next == nullptr && tmp->prev == nullptr){
+                _hashTable[it.index] = nullptr;
+                delete tmp;
+                --_size;
+            }
+            else if(tmp->prev== nullptr){
+                _hashTable[it.index] = tmp->next;
+                tmp->next->prev= nullptr;
+                tmp->next = nullptr;
+                delete tmp;
+                --_size;
+            }
+            else if(tmp->next == nullptr){
+                tmp->prev->next= nullptr;
+                tmp->prev= nullptr;
+                delete tmp;
+                --_size;
+            }
+            else{
+                HashNode *prevN = tmp->prev;
+                HashNode *nextN = tmp->next;
+                prevN->next=tmp->next;
+                nextN->prev=tmp->prev;
+                tmp->prev = tmp->next = nullptr;
+                delete tmp;
+                --_size;
+            }
+        }
+
+        void _clear(){
+            size_type index = 0;
+            HashNode *tmp, *deleted;
+            while(index < _tableSize){
+                if(_hashTable[index]!= nullptr){
+                    tmp = _hashTable[index];
+                    _hashTable[index]= nullptr;
+                    while(tmp!= nullptr){
+                        deleted = tmp;
+                        tmp= tmp->next;
+
+                        if(tmp != nullptr)
+                            tmp->prev = nullptr;
+                        deleted->next= nullptr;
+                        delete deleted;
+                        --_size;
+                    }
+                }
+                ++index;
+            }
         }
 
         size_type getSize() const {
@@ -137,8 +248,14 @@ namespace aisdi {
         }
 
         bool operator==(const HashMap &other) const {
-            (void) other;
-            throw std::runtime_error("TODO");
+            if(_size != other._size)return false;
+            ConstIterator a = cbegin();
+            ConstIterator b = other.cbegin();
+            while(a != cend() && b != other.cend()){
+                if(*a++ != *b++)return false;
+            }
+
+            return true;
         }
 
         bool operator!=(const HashMap &other) const {
@@ -187,6 +304,11 @@ namespace aisdi {
 
         const_iterator end() const {
             return cend();
+        }
+
+        size_type stupidHashFunction(const key_type& key) const
+        {
+            return key%_tableSize;
         }
     };
 

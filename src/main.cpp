@@ -47,12 +47,14 @@ int main(){
 //    std::cout<<map.begin()->second;
 
     std::cout<<map2.isEmpty();*/
-    Hash<int,std::string> map = { { 42, "Chuck" }, { 27, "Bob" } };
+    Hash<int,std::string> map = { { 753, "Rome" }, { 1789, "Paris" } }; ;
+    Hash<int,std::string> other = { { 42, "Alice" }, { 27, "Bob" } };
 
-    map[42] = "Alice";
-    auto it = (map.end());
-    --it;
-    std::cout<<it->second<<std::endl;
+    other = std::move(map);
+    //    auto it = (map.end());
+//    --it;
+//    map._clear();
+    std::cout<<other.isEmpty()<<std::endl;
    // std::cout<<it->second;
     //std::cout<<(map.cend()==it)<<std::endl;
 }
