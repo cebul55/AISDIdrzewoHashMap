@@ -80,14 +80,18 @@ namespace aisdi {
             /*(void) other;
             throw std::runtime_error("TODO");*/
             if(*this == other)return *this;
-            _clear();
+            //if(_size!=0)
+                _clear();
             _size=0;
             for(auto& a: other)valueOf(a.first) = a.second;
             return *this;
         }
 
         HashMap &operator=(HashMap &&other) {
-            _clear();
+            //_clear();
+            //if(_size!=0)
+                _clear();
+            delete _hashTable;
             _hashTable = other._hashTable;
             _size = other._size;
             other._hashTable = nullptr;
@@ -95,7 +99,7 @@ namespace aisdi {
             return *this;
         }
         ~HashMap(){
-            if(_size!=0)
+            //if(_size!=0)
                 _clear();
             delete _hashTable;
         }
@@ -222,6 +226,7 @@ namespace aisdi {
         }
 
         void _clear(){
+            if (_size == 0) return;
             size_type index = 0;
             HashNode *tmp, *deleted;
             while(index < _tableSize){
