@@ -621,7 +621,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenMoveAssigning_ThenAllElements
   thenCopiedObjectsCountWas<K>(0);
   thenAssignedObjectsCountWas<K>(0);
   thenMovedObjectsCountWas<K>(0);
-  thenDestroyedObjectsCountWas<K>(4);
+  thenDestroyedObjectsCountWas<K>(2);
   thenMapContainsItems(other, { { 753, "Rome" }, { 1789, "Paris" } });
 }
 BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenReadingValueOfAnyKey_ThenExceptionIsThrown,

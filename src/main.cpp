@@ -32,12 +32,12 @@ int main(int argc, char** argv)
 }
 */
 int main(){
-/*    //Map<int,int> *map = new Map<int,int>;
-    Map<int,int> map;
+//Map<int,int> *map = new Map<int,int>;
+    //Map<int,int> map;
     Map<int,int> other = { { 42, 5 }, { 27, 20 } };
 
-    map = other;
-    std::cout<<other.isEmpty()<<std::endl;*//*
+    //map = other;
+    //std::cout<<other.isEmpty()<<std::endl;
     Map<int,int> map = { { 42, 5 }, { 27, 20 } };
 //    Map<int,int> map1;
     Map<int,int> map2{std::move(map)};
@@ -46,15 +46,17 @@ int main(){
     //map._clear(map._root);
 //    std::cout<<map.begin()->second;
 
-    std::cout<<map2.isEmpty();*/
-    Hash<int,std::string> map = { { 753, "Rome" }, { 1789, "Paris" } }; ;
-    Hash<int,std::string> other = { { 42, "Alice" }, { 27, "Bob" } };
+    //std::cout<<map2.isEmpty();
+    //Hash<int,std::string> mapp = { { 0, "Rome" }, { 1789, "Paris" } }; ;
+    Hash<int,int> otherr = { { 42, 1 }, { 27, 2 } };
 
-    other = std::move(map);
+    //otherr = std::move(mapp);
+    otherr[0]=3;
+    otherr[0]=4;
     //    auto it = (map.end());
 //    --it;
 //    map._clear();
-    std::cout<<other.isEmpty()<<std::endl;
+    std::cout<<otherr[0]<<std::endl;
    // std::cout<<it->second;
     //std::cout<<(map.cend()==it)<<std::endl;
 }

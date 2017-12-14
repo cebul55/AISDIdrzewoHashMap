@@ -142,8 +142,8 @@ namespace aisdi {
                     HashNode *tmp = _hashTable[hashKey];
                     while(tmp != nullptr ){
                         if(tmp->nodeElement.first == key) {
-                            if (tmp->nodeElement.second != mapped_type{})
-                                tmp->nodeElement.second = mapped_type{};
+                            //if (tmp->nodeElement.second != mapped_type{})
+                                //tmp->nodeElement.second = mapped_type{};
                             return tmp->nodeElement.second;
                         }
                         else
