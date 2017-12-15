@@ -91,7 +91,7 @@ namespace aisdi {
             //_clear();
             //if(_size!=0)
                 _clear();
-            delete _hashTable;
+            delete[] _hashTable;
             _hashTable = other._hashTable;
             _size = other._size;
             other._hashTable = nullptr;
@@ -101,7 +101,7 @@ namespace aisdi {
         ~HashMap(){
             //if(_size!=0)
                 _clear();
-            delete _hashTable;
+            delete[] _hashTable;
         }
 
         bool isEmpty() const {

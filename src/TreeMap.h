@@ -47,6 +47,8 @@ public:
             _root = nullptr;
             _nodeCount = 0;
         }
+        else if(_root != nullptr)
+          delete _root;
   }
 
   TreeMap(std::initializer_list<value_type> list): TreeMap()
