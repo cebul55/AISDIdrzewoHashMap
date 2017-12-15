@@ -114,6 +114,7 @@ public:
       Node *node = new Node(key, mapped_type{});
       _root->left = node;
       node->parent = _root;
+      node->balanceFactor=0;
       _nodeCount++;
 
       return node->nodeElement.second;
@@ -135,10 +136,31 @@ public:
         if(tmp == nullptr){
           Node *node = new Node(key, mapped_type{});
           node->parent = pos;
-          if(k<key)
+          node->balanceFactor=0;
+          if(k<key) {
             pos->right = node;
-          else
+            Node *tmp = node; //set balance up wstawianie prawego liscia
+            while(tmp->parent->parent != nullptr){
+              tmp->parent->balanceFactor++;
+              if(tmp->parent->balanceFactor == 2) {
+                balanceFromRight(tmp->parent);
+                break;
+              }
+              tmp=tmp->parent;
+            }
+          }
+          else {
             pos->left = node;
+            Node *tmp = node; //set balance up wstawianie lewego liscia
+            while(tmp->parent->parent != nullptr){
+              tmp->parent->balanceFactor--;
+              if(tmp->parent->balanceFactor == -2) {
+                balanceFromLeft(tmp->parent);
+                break;
+              }
+              tmp=tmp->parent;
+            }
+          }
 
           _nodeCount++;
           return node->nodeElement.second;
@@ -181,6 +203,11 @@ public:
       remove(root->nodeElement.first);
     }
   }
+
+    void clean(){
+      if(_root!= nullptr && _root->left!= nullptr)
+        _clear(_root->left);
+    }
 
   void remove(const key_type& key)
   {
@@ -331,6 +358,148 @@ public:
   {
     return cend();
   }
+
+    void rotateToLeft(Node *root){
+      Node *p;  //ptr to thr root of right subtree
+      if(root == nullptr || root->parent== nullptr)
+        std::cerr<<"Error in rotating to left"<<std::endl;
+      else if(root->right == nullptr)
+        std::cerr<<"Error in the tree : No right subtree to rotate."<<std::endl;
+      else
+      {
+        p = root->right;
+        root->right = p->left;
+        if(root->right != nullptr)
+          root->right->parent = root;
+
+        p->left = root;
+        p->parent = root->parent;
+        if(p->parent->left == root)
+          p->parent->left=p;
+        else
+          p->parent->right=p;
+        root->parent = p;
+      }
+    }//rotate to the left
+
+    void rotateToRight(Node *root){
+      Node *p;  //ptr to the root of left subtree
+      if(root == nullptr || root->parent== nullptr)
+        std::cerr<<"Error in rotating to right"<<std::endl;
+      else if(root->left == nullptr)
+        std::cerr<<"Error in the tree : No left subtree to rotate."<<std::endl;
+      else
+      {
+        p = root->left;
+        root->left = p->right;
+        if(root->left != nullptr)
+          root->left->parent=root;
+
+        p->right = root;
+        p->parent = root->parent;
+        if(p->parent->left == root)
+          p->parent->left=p;
+        else
+          p->parent->right=p;
+        root->parent = p;
+      }
+    }
+
+    void balanceFromLeft(Node *root)
+    {
+      Node *p, *w;
+      p = root->left;
+
+      switch(p->balanceFactor){
+        case -1: {
+          root->balanceFactor = 0;
+          p->balanceFactor = 0;
+          rotateToRight(root);
+          break;
+        }
+        case 0 :
+        std::cerr<<"Error: cannot balance from the left."<<std::endl;
+         break;
+        case 1:{
+          w = p->right;
+          switch(w->balanceFactor )
+          {
+            case -1: {
+              root->balanceFactor = 1;
+              p->balanceFactor = 0;
+              break;
+            }
+            case 0:{
+              root->balanceFactor = 0;
+              p->balanceFactor = 0;
+              break;
+            }
+            case 1:{
+              root->balanceFactor=0;
+              p->balanceFactor = -1;
+              break;
+            }
+          }//switch(w->balanceFactor)
+          w->balanceFactor = 0;
+          rotateToLeft(p);
+          root->left = p;
+          rotateToRight(root);
+        }
+
+      }//end switch
+    }//end balanceFromLeft
+
+    void balanceFromRight(Node *root)
+    {
+      Node *p, *w;
+
+      p = root->right;
+      switch(p->balanceFactor)
+      {
+        case -1:
+        {
+          w = p->left;
+          switch(w->balanceFactor)
+          {
+            case -1:
+            {
+              root->balanceFactor=0;
+              p->balanceFactor= 1;
+              break;
+            }
+            case 0:
+            {
+              root->balanceFactor = 0;
+              p->balanceFactor = 0;
+              break;
+            }
+            case 1:
+            {
+              root->balanceFactor = -1;
+              p->balanceFactor = 0;
+              break;
+            }
+          }//end switch(w->balanceFactor)
+          w->balanceFactor = 0;
+          rotateToRight(p);
+          root->right = p;
+          rotateToLeft(root);
+          break;
+        }
+        case 0:
+        std::cerr<<"Error: Cannot balance from the left"<<std::endl;
+              break;
+        case 1:
+        {
+          root->balanceFactor=0;
+          p->balanceFactor=0;
+          rotateToLeft(root);
+          break;
+        }
+
+      }//end switch
+    }//end balanceFromRight
+
 };
 
 template<typename KeyType, typename ValueType>
@@ -341,14 +510,14 @@ public:
     Node *left;                    /*ptr to left child*/
     Node *right;                   /*ptr to right child*/
     value_type nodeElement;        /* pair<const key_type, mapped_type>*/
-    int hight;                     /*hight of highest subtree + 1*/
+    int balanceFactor;                     /*hight of highest subtree + 1*/
 
     Node()
     {
       parent = nullptr;
       left = nullptr;
       right = nullptr;
-      hight = 0;
+      balanceFactor = 0;
     }
 
     Node(const key_type key, mapped_type value):
@@ -357,7 +526,7 @@ public:
       parent = nullptr;
       left = nullptr;
       right = nullptr;
-      hight = 0;
+      balanceFactor = 0;
     };
 
     ~Node(){

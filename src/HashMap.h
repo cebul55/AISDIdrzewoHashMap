@@ -146,8 +146,12 @@ namespace aisdi {
                                 //tmp->nodeElement.second = mapped_type{};
                             return tmp->nodeElement.second;
                         }
-                        else
-                            tmp = tmp->next;
+                        else {
+                            if (tmp->next != nullptr)
+                                tmp = tmp->next;
+                            else break;
+                        }
+
                     }
                     /*if (tmp->nodeElement.second != mapped_type{}) {
                         tmp->nodeElement.second = mapped_type{};
@@ -281,7 +285,7 @@ namespace aisdi {
         }
 
         iterator end() {
-            iterator it(this);
+            iterator it(this,_hashTable[_tableSize],_tableSize);
             return it;
         }
 
@@ -299,7 +303,7 @@ namespace aisdi {
         }
 
         const_iterator cend() const {
-            const_iterator it(this);
+            const_iterator it(this,_hashTable[_tableSize],_tableSize);
             return it;
         }
 
@@ -372,6 +376,9 @@ namespace aisdi {
                 --index;
                 while (index > 0 && myMap->_hashTable[index] == nullptr)
                     --index;
+                if (index == myMap->_tableSize && myMap->_size == 0)
+                    throw std::out_of_range("can't decrement iterator");
+
                 if (index == 0 && myMap->_hashTable[index] == nullptr)
                     throw std::out_of_range("can't decrement iterator");
 

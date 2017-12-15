@@ -125,7 +125,7 @@ struct Fixture
 } // namespace
 
 template <typename K>
-using Map = aisdi::TreeMap<K, std::string>;
+using Tree = aisdi::TreeMap<K, std::string>;
 
 using TestedKeyTypes = boost::mpl::list<std::int32_t, std::uint64_t, OperationCountingObject>;
 using std::begin;
@@ -134,7 +134,7 @@ using std::end;
 BOOST_FIXTURE_TEST_SUITE(TreeMapTests, Fixture)
 
 template <typename K>
-void thenMapContainsItems(const Map<K>& map,
+void thenMapContainsItems(const Tree<K>& map,
                           const std::map<K, std::string>& expected)
 {
   BOOST_CHECK_EQUAL(map.getSize(), expected.size());
@@ -225,7 +225,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenMap_WhenCreatedWithDefaultConstructor_ThenItI
                               K,
                               TestedKeyTypes)
 {
-  const Map<K> map;
+  const Tree<K> map;
 
   BOOST_CHECK(map.isEmpty());
 }
@@ -234,7 +234,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenAddingItem_ThenItIsNoLongerEmpty
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
 
   map[K{}] = std::string{};
 
@@ -245,10 +245,10 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenGettingIterators_ThenBeginEquals
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
 
   BOOST_CHECK(begin(map) == end(map));
-  BOOST_CHECK(const_cast<const Map<K>&>(map).begin() == map.end());
+  BOOST_CHECK(const_cast<const Tree<K>&>(map).begin() == map.end());
   BOOST_CHECK(map.cbegin() == map.cend());
 }
 
@@ -256,7 +256,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenGettingIterator_ThenBeginIsNo
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
   map[K{}] = std::string{};
 
 
@@ -267,7 +267,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenMapWithOnePair_WhenIterating_ThenPairIsReturn
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
   map[753] = "Rome";
 
   auto it = map.begin();
@@ -281,7 +281,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenIterator_WhenPostIncrementing_ThenPreviousPos
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
   map[K{}] = std::string{};
 
   auto it = map.begin();
@@ -297,7 +297,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenIterator_WhenPreIncrementing_ThenNewPositionI
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
   map[K{}] = std::string{};
 
   auto it = map.begin();
@@ -311,7 +311,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEndIterator_WhenIncrementing_ThenOperationThr
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
 
   BOOST_CHECK_THROW(map.end()++, std::out_of_range);
   BOOST_CHECK_THROW(++(map.end()), std::out_of_range);
@@ -323,7 +323,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEndIterator_WhenDecrementing_ThenIteratorPoin
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
   map[1] = std::string{};
 
   auto it = map.end();
@@ -337,7 +337,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenIterator_WhenPreDecrementing_ThenNewIteratorV
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
   map[1] = std::string{};
 
   auto it = map.end();
@@ -351,7 +351,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenIterator_WhenPostDecrementing_ThenOldIterator
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
   map[1] = std::string{};
 
   auto it = map.end();
@@ -365,7 +365,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenBeginIterator_WhenDecrementing_ThenOperationT
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
 
   BOOST_CHECK_THROW(map.begin()--, std::out_of_range);
   BOOST_CHECK_THROW(--(map.begin()), std::out_of_range);
@@ -377,7 +377,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEndIterator_WhenDereferencing_ThenOperationTh
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
 
   BOOST_CHECK_THROW(*map.end(), std::out_of_range);
   BOOST_CHECK_THROW(*map.cend(), std::out_of_range);
@@ -389,7 +389,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenConstIterator_WhenDereferencing_ThenItemIsRet
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
   map[42] = "Answer";
 
   const auto it = map.cbegin();
@@ -402,7 +402,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenSearchingForKey_ThenEndIsReturne
                               K,
                               TestedKeyTypes)
 {
-  const Map<K> map;
+  const Tree<K> map;
 
   const auto it = map.find(123);
 
@@ -412,7 +412,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenSearchingForMissingKey_ThenEn
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
   map[321] = "Not it";
 
   const auto it = map.find(123);
@@ -423,7 +423,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenSearchingForKey_ThenItemIsRet
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
   map[321] = "Not it";
   map[123] = "It!";
 
@@ -438,7 +438,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenGettingSize_ThenZeroIsReturnd,
                               K,
                               TestedKeyTypes)
 {
-  const Map<K> map;
+  const Tree<K> map;
 
   BOOST_CHECK_EQUAL(map.getSize(), 0);
 }
@@ -447,7 +447,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenGettingSize_ThenItemCountIsRe
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
   map[1] = "1";
   map[2] = "1";
 
@@ -458,7 +458,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenMap_WhenInitializingFromListOfPairs_ThenAllIt
                               K,
                               TestedKeyTypes)
 {
-  const Map<K> map = { { 42, "Alice" }, { 27, "Bob" } };
+  const Tree<K> map = { { 42, "Alice" }, { 27, "Bob" } };
 
   thenMapContainsItems(map, { { 42, "Alice" }, { 27, "Bob" } });
 }
@@ -468,7 +468,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenIterator_WhenDereferencing_ThenItemCanBeChang
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map = { { 42, "Chuck" }, { 27, "Bob" } };
+  Tree<K> map = { { 42, "Chuck" }, { 27, "Bob" } };
 
   auto it = map.find(42);
   it->second = "Alice";
@@ -480,7 +480,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenAddingItem_ThenItemIsInMap,
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
 
   map[42] = "Alice";
 
@@ -491,7 +491,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenChangingItem_ThenNewValueIsIn
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map = { { 42, "Chuck" }, { 27, "Bob" } };
+  Tree<K> map = { { 42, "Chuck" }, { 27, "Bob" } };
 
   map[42] = "Alice";
 
@@ -502,8 +502,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenCreatingCopy_ThenBothMapsAreEmpt
                               K,
                               TestedKeyTypes)
 {
-  const Map<K> map;
-  const Map<K> other(map);
+  const Tree<K> map;
+  const Tree<K> other(map);
 
   BOOST_CHECK(other.isEmpty());
   BOOST_CHECK(map.isEmpty());
@@ -513,8 +513,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenCreatingCopy_ThenAllItemsAreC
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map = { { 753, "Rome" }, { 1789, "Paris" } };
-  const Map<K> other{map};
+  Tree<K> map = { { 753, "Rome" }, { 1789, "Paris" } };
+  const Tree<K> other{map};
 
   map[1410] = "Grunwald";
 
@@ -526,8 +526,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenMovingToOther_ThenMapIsEmpty,
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
-  Map<K> other{std::move(map)};
+  Tree<K> map;
+  Tree<K> other{std::move(map)};
 
   BOOST_CHECK(other.isEmpty());
 }
@@ -536,10 +536,10 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenMovingToOther_ThenAllItemsAre
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map = { { 753, "Rome" }, { 1789, "Paris" } };
+  Tree<K> map = { { 753, "Rome" }, { 1789, "Paris" } };
 
   OperationCountingObject::resetCounters();
-  Map<K> other{std::move(map)};
+  Tree<K> other{std::move(map)};
 
   thenConstructedObjectsCountWas<K>(0);
   thenCopiedObjectsCountWas<K>(0);
@@ -553,8 +553,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenAssigningToOther_ThenOtherMapIsE
                               K,
                               TestedKeyTypes)
 {
-  const Map<K> map;
-  Map<K> other = { { 42, "Alice" }, { 27, "Bob" } };
+  const Tree<K> map;
+  Tree<K> other = { { 42, "Alice" }, { 27, "Bob" } };
 
   other = map;
 
@@ -565,8 +565,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenAssigningToOther_ThenAllEleme
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map = { { 753, "Rome" }, { 1789, "Paris" } };
-  Map<K> other = { { 42, "Alice" }, { 27, "Bob" } };
+  Tree<K> map = { { 753, "Rome" }, { 1789, "Paris" } };
+  Tree<K> other = { { 42, "Alice" }, { 27, "Bob" } };
 
   other = map;
   map[1410] = "Grunwald";
@@ -578,7 +578,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenSelfAssigning_ThenNothingHappens
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
 
   map = map;
 
@@ -589,7 +589,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNotEmptyMap_WhenSelfAssigning_ThenNothingHapp
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map = { { 42, "Alice" }, { 27, "Bob" } };
+  Tree<K> map = { { 42, "Alice" }, { 27, "Bob" } };
 
   map = map;
 
@@ -600,8 +600,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenMoveAssigning_ThenMapIsEmpty,
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
-  Map<K> other = { { 42, "Alice" }, { 27, "Bob" } };
+  Tree<K> map;
+  Tree<K> other = { { 42, "Alice" }, { 27, "Bob" } };
 
   other = std::move(map);
 
@@ -611,8 +611,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNonEmptyMap_WhenMoveAssigning_ThenAllElements
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map = { { 753, "Rome" }, { 1789, "Paris" } };
-  Map<K> other = { { 42, "Alice" }, { 27, "Bob" } };
+  Tree<K> map = { { 753, "Rome" }, { 1789, "Paris" } };
+  Tree<K> other = { { 42, "Alice" }, { 27, "Bob" } };
 
   OperationCountingObject::resetCounters();
   other = std::move(map);
@@ -628,7 +628,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenReadingValueOfAnyKey_ThenExcepti
                               K,
                               TestedKeyTypes)
 {
-  const Map<K> map;
+  const Tree<K> map;
 
   BOOST_CHECK_THROW(map.valueOf(1), std::out_of_range);
 }
@@ -637,7 +637,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNotEmptyMap_WhenReadingValueOfMissingKey_Then
                               K,
                               TestedKeyTypes)
 {
-  const Map<K> map = { { 42, "Alice" }, { 27, "Bob" } };
+  const Tree<K> map = { { 42, "Alice" }, { 27, "Bob" } };
 
   BOOST_CHECK_THROW(map.valueOf(1), std::out_of_range);
 }
@@ -646,7 +646,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNotEmptyMap_WhenReadingValueOfAKey_ThenValueI
                               K,
                               TestedKeyTypes)
 {
-  const Map<K> map = { { 42, "Alice" }, { 27, "Bob" } };
+  const Tree<K> map = { { 42, "Alice" }, { 27, "Bob" } };
 
   BOOST_CHECK_EQUAL(map.valueOf(42), "Alice");
 }
@@ -655,7 +655,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNotEmptyMap_WhenChangingValueOfAKey_ThenValue
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map = { { 42, "Alice" }, { 27, "Bob" } };
+  Tree<K> map = { { 42, "Alice" }, { 27, "Bob" } };
 
   map.valueOf(42) = "Chuck";
 
@@ -666,7 +666,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenEmptyMap_WhenRemovingValueByKey_ThenException
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map;
+  Tree<K> map;
 
   BOOST_CHECK_THROW(map.remove(1), std::out_of_range);
 }
@@ -675,7 +675,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNotEmptyMap_WhenRemovingValueByWrongKey_ThenE
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map = { { 42, "Alice" }, { 27, "Bob" } };
+  Tree<K> map = { { 42, "Alice" }, { 27, "Bob" } };
 
   BOOST_CHECK_THROW(map.remove(1), std::out_of_range);
 }
@@ -684,7 +684,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNotEmptyMap_WhenRemovingValueByKey_ThenItemIs
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map = { { 42, "Alice" }, { 27, "Bob" } };
+  Tree<K> map = { { 42, "Alice" }, { 27, "Bob" } };
 
   map.remove(27);
 
@@ -695,7 +695,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenSingleItemMap_WhenRemovingValueByKey_ThenMapB
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map = { { 27, "Bob" } };
+  Tree<K> map = { { 27, "Bob" } };
 
   map.remove(27);
 
@@ -706,7 +706,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNotEmptyMap_WhenErasingEnd_ThenExceptionIsThr
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map = { { 42, "Alice" }, { 27, "Bob" } };
+  Tree<K> map = { { 42, "Alice" }, { 27, "Bob" } };
 
   BOOST_CHECK_THROW(map.remove(end(map)), std::out_of_range);
 }
@@ -715,7 +715,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenNotEmptyMap_WhenRemovingItemByIterator_ThenIt
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map = { { 42, "Alice" }, { 27, "Bob" } };
+  Tree<K> map = { { 42, "Alice" }, { 27, "Bob" } };
 
   map.remove(map.find(42));
 
@@ -726,7 +726,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenSingleItemMap_WhenRemovingItemByIterator_Then
                               K,
                               TestedKeyTypes)
 {
-  Map<K> map = { { 42, "Alice" } };
+  Tree<K> map = { { 42, "Alice" } };
 
   map.remove(map.find(42));
 
@@ -737,8 +737,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenTwoEmptyMaps_WhenComparingThem_ThenTheyAreRep
                               K,
                               TestedKeyTypes)
 {
-  const Map<K> map;
-  const Map<K> other;
+  const Tree<K> map;
+  const Tree<K> other;
 
   BOOST_CHECK(map == other);
 }
@@ -747,8 +747,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenTwoEqualMaps_WhenComparingThem_ThenTheyAreRep
                               K,
                               TestedKeyTypes)
 {
-  const Map<K> map = { { 42, "Alice" }, { 27, "Bob" } };
-  const Map<K> other = { { 42, "Alice" }, { 27, "Bob" } };
+  const Tree<K> map = { { 42, "Alice" }, { 27, "Bob" } };
+  const Tree<K> other = { { 42, "Alice" }, { 27, "Bob" } };
 
   BOOST_CHECK(map == other);
 }
@@ -757,8 +757,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenTwoEquivalentMaps_WhenComparingThem_ThenTheyA
                               K,
                               TestedKeyTypes)
 {
-  const Map<K> map = { { 42, "Alice" }, { 27, "Bob" } };
-  const Map<K> other = { { 27, "Bob" }, { 42, "Alice" } };
+  const Tree<K> map = { { 42, "Alice" }, { 27, "Bob" } };
+  const Tree<K> other = { { 27, "Bob" }, { 42, "Alice" } };
 
   BOOST_CHECK(map == other);
 }
@@ -767,8 +767,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenTwoMapsWithDifferentValues_WhenComparingThem_
                               K,
                               TestedKeyTypes)
 {
-  const Map<K> map = { { 42, "Alice" }, { 27, "Bob" } };
-  const Map<K> other = { { 27, "Alice" }, { 42, "Bob" } };
+  const Tree<K> map = { { 42, "Alice" }, { 27, "Bob" } };
+  const Tree<K> other = { { 27, "Alice" }, { 42, "Bob" } };
 
   BOOST_CHECK(map != other);
 }
@@ -777,8 +777,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE(GivenTwoMapsWithDifferentKeys_WhenComparingThem_Th
                               K,
                               TestedKeyTypes)
 {
-  const Map<K> map = { { 42, "Alice" }, { 27, "Bob" }, { 13, "Chuck" } };
-  const Map<K> other = { { 27, "Alice" }, { 42, "Bob" } };
+  const Tree<K> map = { { 42, "Alice" }, { 27, "Bob" }, { 13, "Chuck" } };
+  const Tree<K> other = { { 27, "Alice" }, { 42, "Bob" } };
 
   BOOST_CHECK(map != other);
 }

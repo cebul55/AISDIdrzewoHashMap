@@ -1,6 +1,7 @@
 #include <cstddef>
 #include <cstdlib>
 #include <string>
+#include <chrono>
 
 #include "TreeMap.h"
 #include "HashMap.h"
@@ -9,54 +10,89 @@ namespace
 {
 
 template <typename K, typename V>
-using Map = aisdi::TreeMap<K, V>;
+using Tree = aisdi::TreeMap<K, V>;
 
-    template <typename K, typename V>
-    using Hash = aisdi::HashMap<K, V>;
+template <typename K, typename V>
+using Hash = aisdi::HashMap<K, V>;
 
-/*
-void perfomTest()
-{
-  Map<int, std::string> map;
-  map[1] = "TODO";
-}
-*/
+
+void performAddingTest(){
+    Hash<int,int> hash;
+    Tree<int,int> tree;
+    auto start = std::chrono::system_clock::now();
+    for(int i = 0 ; i < 700000 ; ++i){
+        tree.valueOf(i) = i;
+    }
+    auto end = std::chrono::system_clock::now();
+
+    std::chrono::duration<double> elapsedSecondsTree = end - start;
+    std::time_t end_time = std::chrono::system_clock::to_time_t(end);
+
+    std::cout << "finished adding to tree at "<< std::ctime(&end_time)
+              << "elapsed time: "<<elapsedSecondsTree.count() <<"s\n";
+
+    start = std::chrono::system_clock::now();
+    for(int i = 0 ; i < 700000 ; ++i){
+        hash.valueOf(i) = i;
+    }
+    end = std::chrono::system_clock::now();
+
+    std::chrono::duration<double> elapsedSecondsHash = end - start;
+    std::time_t end_timeH = std::chrono::system_clock::to_time_t(end);
+
+    std::cout << "finished adding to hash at "<< std::ctime(&end_timeH)
+              << "elapsed time: "<<elapsedSecondsHash.count() <<"s\n";
+//iterating
+    start = std::chrono::system_clock::now();
+    auto it5 = tree.begin();
+    std::cout<<it5->second;
+    auto it2 = tree.end();
+    while(it5 == it2){++it5;}
+    end = std::chrono::system_clock::now();
+
+    elapsedSecondsTree = end - start;
+    end_time = std::chrono::system_clock::to_time_t(end);
+
+    std::cout << "finished iterating tree at "<< std::ctime(&end_time)
+              << "elapsed time: "<<elapsedSecondsTree.count() <<"s\n";
+
+    start = std::chrono::system_clock::now();
+    auto it3 = hash.begin();
+    auto it4 = hash.end();
+    --it4;
+    while(it3 == it4){++it3;}
+    end = std::chrono::system_clock::now();
+
+    elapsedSecondsHash = end - start;
+    end_timeH = std::chrono::system_clock::to_time_t(end);
+
+    std::cout << "finished iterating hash at "<< std::ctime(&end_timeH)
+              << "elapsed time: "<<elapsedSecondsHash.count() <<"s\n";
+//deleting
+         start = std::chrono::system_clock::now();
+        tree.clean();
+         end = std::chrono::system_clock::now();
+
+        elapsedSecondsTree = end - start;
+        end_time = std::chrono::system_clock::to_time_t(end);
+
+        std::cout << "finished deleting tree at "<< std::ctime(&end_time)
+                  << "elapsed time: "<<elapsedSecondsTree.count() <<"s\n";
+
+        start = std::chrono::system_clock::now();
+        hash._clear();
+        end = std::chrono::system_clock::now();
+
+        elapsedSecondsHash = end - start;
+        end_timeH = std::chrono::system_clock::to_time_t(end);
+
+        std::cout << "finished deleting hash at "<< std::ctime(&end_timeH)
+                  << "elapsed time: "<<elapsedSecondsHash.count() <<"s\n";
+
+    }
+
 } // namespace
-/*
-int main(int argc, char** argv)
-{
-  const std::size_t repeatCount = argc > 1 ? std::atoll(argv[1]) : 10000;
-  for (std::size_t i = 0; i < repeatCount; ++i)
-    perfomTest();
-  return 0;
-}
-*/
+
 int main(){
-//Map<int,int> *map = new Map<int,int>;
-    //Map<int,int> map;
-    Map<int,int> other = { { 42, 5 }, { 27, 20 } };
-
-    //map = other;
-    //std::cout<<other.isEmpty()<<std::endl;
-    Map<int,int> map = { { 42, 5 }, { 27, 20 } };
-//    Map<int,int> map1;
-    Map<int,int> map2{std::move(map)};
-    //map = map2;
-    //map.remove(27);
-    //map._clear(map._root);
-//    std::cout<<map.begin()->second;
-
-    //std::cout<<map2.isEmpty();
-    //Hash<int,std::string> mapp = { { 0, "Rome" }, { 1789, "Paris" } }; ;
-    Hash<int,int> otherr = { { 42, 1 }, { 27, 2 } };
-
-    //otherr = std::move(mapp);
-    otherr[0]=3;
-    otherr[0]=4;
-    //    auto it = (map.end());
-//    --it;
-//    map._clear();
-    std::cout<<otherr[0]<<std::endl;
-   // std::cout<<it->second;
-    //std::cout<<(map.cend()==it)<<std::endl;
+    performAddingTest();
 }
